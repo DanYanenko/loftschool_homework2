@@ -1,0 +1,13 @@
+# Игнор-лист файлов проекта
+/app/bower_components/*
+
+/node_modules/*
+
+/dist/*
+
+/.bowerrc
+
+/package.json
+
+.DS_Store
+

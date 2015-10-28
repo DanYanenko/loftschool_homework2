@@ -1,0 +1,21 @@
+.class, .same-class {
+  color: #fff;
+  width: 150px;
+  background: #1a1a1a;
+  border-color: red;
+  outline: none;
+  visibility: hidden;
+  display: none;
+  text-wrap: break-all; }
+
+.same-class {
+  margin-left: 200px; }
+
+.my__lovely-beer {
+  background-color: #101010; }
+
+.my__lovely-rum {
+  background-color: #101010; }
+
+.my__lovely-absinthe {
+  background-color: #101010; }

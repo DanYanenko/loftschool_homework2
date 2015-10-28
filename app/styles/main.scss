@@ -1,0 +1,27 @@
+$color:#fff;
+$width:200px;
+
+
+.class{
+	color:$color;
+	width:$width - 50px;
+	background:lighten(#000,10%);
+	border-color:red;
+	outline:none;
+	visibility:hidden;
+	display:none;
+	text-wrap:break-all;
+}
+
+.same-class{
+	@extend .class;
+	margin-left:200px;
+}
+$count:0;
+@each $drink in (beer,rum, absinthe){
+	$count:$count+1;
+	.my__lovely-#{$drink}{
+		background-color: #101010;
+	}
+}
+
