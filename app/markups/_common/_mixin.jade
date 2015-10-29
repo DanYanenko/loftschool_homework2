@@ -1,0 +1,13 @@
+mixin iterate(className, items)
+	div(class= className)
+		ul(class= className + "__list")
+			-for(var item in items)
+				li(class=className + "__item ")
+					a(href=items[item] class= className + "__link_" + item)= item
+mixin nav(className, items)
+	nav(class= className)
+		.container
+			ul(class= className + "__list")
+				-for(var item in items)
+					li(class=className + "__item")
+						a(href=items[item] class= className + "__link")= item

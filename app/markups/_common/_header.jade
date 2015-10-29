@@ -1,0 +1,26 @@
+include _mixin.jade
+header.header.clearfix
+	.header1-content
+		-socials={'vk':'http://vk.com/daniilyanenko', 'fb':'http://www.facebook.com/daniil.yanenko', 'twitter':'http://twitter.com'};
+		+iterate('footer__social', socials)
+		address.address
+			.address__string ул. Маяковская 6, офис 17
+			.phone__string +7 (921) 123-12-13
+	.header2-content
+		img.logo(src="../../img/logo.png" alt="logo")
+		.search-block
+			input.search-block__textinput(type='text' placeholder="Что будем искать")
+			input.search-block__buttoninput(type='submit' value="Найти")
+		.header2-links
+			ul.header2-links__list
+				- headerLinks=['Карта проезда', 'История заказов', 'Корзина']
+				each val in headerLinks
+					li.header2-links__item
+						a(href="#" target="blank" class="header-links__item-link")= val
+	
+
+			
+
+
+
+			
