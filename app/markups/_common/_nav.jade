@@ -1,3 +1,9 @@
 - navLinks = {'Планшеты': '#', 'Мобильные телефоны': '#', 'Mp3 плееры': '#', 'Персональные компьютеры': '#', 'Ноутбуки': '#', 'Аксессуары': '#', 'Бытовая техника': '#'}
-	+nav('footer__nav', navLinks, 2)
+-navLinks
+	+nav('navigate', navLinks, 2)
+	block navHistory
+		+nav("navHistory", history, 2)
+	+nav('footer__nav', navLinks)
 	
+
+		

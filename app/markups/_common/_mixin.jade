@@ -6,11 +6,13 @@ mixin iterate(className, items)
 					a(href=items[item] class= className + "__link_" + item)= item
 mixin nav(className, items, activeIndex)
 	nav(class= className)
-		.container
+		div(class=className + "__container")
 			ul(class= className + "__list")
 				-var index = 0
 				-for(var item in items)
 					-index++
-					li(class=className + ((activeIndex == index) ? className + '__item' + '_active' : ''))
+					li(class=className + ((activeIndex == index) ? ('__item' + '_active') : '__item'))
 						a(href=items[item] class= className + "__link")= item
+		if block
+			block
 
