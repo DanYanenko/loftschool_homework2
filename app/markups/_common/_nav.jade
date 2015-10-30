@@ -1,9 +1,10 @@
 - navLinks = {'Планшеты': '#', 'Мобильные телефоны': '#', 'Mp3 плееры': '#', 'Персональные компьютеры': '#', 'Ноутбуки': '#', 'Аксессуары': '#', 'Бытовая техника': '#'}
--navLinks
 	+nav('navigate', navLinks, 2)
 	block navHistory
 		+nav("navHistory", history, 2)
-	+nav('footer__nav', navLinks)
+		header.current-section
+			p.current-section__name= currentPage 
+	
 	
 
 		

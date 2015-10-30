@@ -14,7 +14,7 @@
     <!--Fonts-->
     <link rel="stylesheet" href="Fonts/fira.css">
     <!--CSS-->
-    <!--build:css css/combined.css -->
+    <!--build:css dist/css/combined.css -->
     <!--bower:css-->
     
     <!--endbower-->
@@ -73,26 +73,83 @@
             </ul>
           </div>
         </nav>
-        <nav class="footer__nav">
-          <div class="footer__nav__container">
-            <ul class="footer__nav__list">
-              <li class="footer__nav__item"><a href="#" class="footer__nav__link">Планшеты</a></li>
-              <li class="footer__nav__item"><a href="#" class="footer__nav__link">Мобильные телефоны</a></li>
-              <li class="footer__nav__item"><a href="#" class="footer__nav__link">Mp3 плееры</a></li>
-              <li class="footer__nav__item"><a href="#" class="footer__nav__link">Персональные компьютеры</a></li>
-              <li class="footer__nav__item"><a href="#" class="footer__nav__link">Ноутбуки</a></li>
-              <li class="footer__nav__item"><a href="#" class="footer__nav__link">Аксессуары</a></li>
-              <li class="footer__nav__item"><a href="#" class="footer__nav__link">Бытовая техника</a></li>
-            </ul>
-          </div>
-        </nav>
+    <header class="current-section">
+      <p class="current-section__name">Мобильные телефоны</p>
+    </header>
+    <sidebar class="sidebar">
+      <section class="preferences">
+        <ul class="preferences__list">
+          <li class="preferences__item">Флагманы</li>
+          <li class="preferences__item">Бюджетная линейка</li>
+        </ul>
+      </section>
+      <section class="selection_settings">
+        <form method="post" action="#" class="settings__filter">
+          <ul class="accordion__list">
+            <li class="accordion__item">
+              <section class="presence">
+                <ul class="presence__list">
+                  <li class="presence__item">
+                    <input type="radio" name="radiobutton__item" id="radiobutton__item_1" class="radiobutton__item"><span class="radiobutton__value">Во всех магазинах</span>
+                  </li>
+                  <li class="presence__item">
+                    <input type="radio" name="radiobutton__item" id="radiobutton__item_2" class="radiobutton__item"><span class="radiobutton__value">В ближайшем ко мне магазине</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="brands">
+                <ul class="brands__list">
+                  <li class="brands__item">
+                    <input type="checkbox" id="checkbox__item_1" class="checkbox__item"><span class="checkbox__value">Lenovo</span>
+                  </li>
+                  <li class="brands__item">
+                    <input type="checkbox" id="checkbox__item_2" class="checkbox__item"><span class="checkbox__value">Apple</span>
+                  </li>
+                  <li class="brands__item">
+                    <input type="checkbox" id="checkbox__item_3" class="checkbox__item"><span class="checkbox__value">Samsung</span>
+                  </li>
+                  <li class="brands__item">
+                    <input type="checkbox" id="checkbox__item_4" class="checkbox__item"><span class="checkbox__value">Asus</span>
+                  </li>
+                  <li class="brands__item">
+                    <input type="checkbox" id="checkbox__item_5" class="checkbox__item"><span class="checkbox__value">Motorola</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="price">
+                <div class="price__slider"></div>
+              </section>
+              <section class="color">
+              </section>
+              <section class="os">
+                <ul class="os__list">
+                  <li class="os__item">
+                    <input type="checkbox" id="checkbox__item_1" class="checkbox__item"><span class="checkbox__value">Android</span>
+                  </li>
+                  <li class="os__item">
+                    <input type="checkbox" id="checkbox__item_2" class="checkbox__item"><span class="checkbox__value">iOS</span>
+                  </li>
+                  <li class="os__item">
+                    <input type="checkbox" id="checkbox__item_3" class="checkbox__item"><span class="checkbox__value">Windows Mobile</span>
+                  </li>
+                  <li class="os__item">
+                    <input type="checkbox" id="checkbox__item_4" class="checkbox__item"><span class="checkbox__value">Symbian</span>
+                  </li>
+                  <li class="os__item">
+                    <input type="checkbox" id="checkbox__item_5" class="checkbox__item"><span class="checkbox__value">Custom</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="reset">
+                <input type="reset" id="reset__button" value="Сбросить фильтр" class="reset__button">
+              </section>
+            </li>
+          </ul>
+        </form>
+      </section>
+    </sidebar>
     <p>My fucking first page!!!</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Liberesse culpa harum, molestiae et id dolore numquam non facere cum. Repudiandae tenetur illum sed corporis, beatae reprehenderit eligendi sint.</p>
-    <!--build:css css/combined.css -->
-    <!--bower:css-->
-    
-    <!--endbower-->
-    <!--endbuild	-->
     <footer class="footer clearfix"><img src="../../img/footer-logo.png" alt="footer-logo" class="footer__logo">
           <div class="footer__social">
             <ul class="footer__social__list">
@@ -116,5 +173,9 @@
           </nav>
       <p class="copyright">All rights reserved. 2015. no copy allowed</p>
     </footer>
+    <!--build:js dist/js/combined.css -->
+    <!--bower:js-->
+    <!--endbower-->
+    <!--endbuild-->
   </body>
 </html>
