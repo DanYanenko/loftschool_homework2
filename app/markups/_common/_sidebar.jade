@@ -1,5 +1,5 @@
-//-include _mixin.jade
-sidebar.sidebar
+include _mixin.jade
+aside.sidebar
 	section.preferences
 		ul.preferences__list
 			li.preferences__item Флагманы
@@ -33,11 +33,13 @@ sidebar.sidebar
 							li.brands__item
 								input.checkbox__item(type="checkbox" id="checkbox__item_5")
 								span.checkbox__value Motorola
+							li.os__reset
+								input.reset__button(type="reset" id="reset__button" value="Сбросить фильтр")
 					section.price
 						.price__slider
 					section.color
-						//- -var colors = 12
-						//- +colorList(colors)
+						-var colors = 12
+						+colorList(colors)
 					section.os
 						ul.os__list
 							li.os__item
@@ -55,8 +57,8 @@ sidebar.sidebar
 							li.os__item
 								input.checkbox__item(type="checkbox" id="checkbox__item_5")
 								span.checkbox__value Custom
-					section.reset
-						input.reset__button(type="reset" id="reset__button" value="Сбросить фильтр")
+							li.os__reset
+								input.reset__button(type="reset" id="reset__button" value="Сбросить фильтр")
 
 					
 

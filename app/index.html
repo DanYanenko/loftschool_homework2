@@ -40,10 +40,11 @@
       </div>
       <div class="header2-content"><img src="../../img/logo.png" alt="logo" class="logo">
         <div class="search-block">
-          <input type="text" placeholder="Что будем искать" class="search-block__textinput">
-          <input type="submit" value="Найти" class="search-block__buttoninput">
-        </div>
-        <div class="header2-links">
+          <form method="post" id="search-form" action="#" class="search-form">
+            <input type="search" placeholder="Что будем искать" class="search-block__textinput">
+            <input type="submit" value="Найти" class="search-block__buttoninput">
+          </form>
+          <div class="header2-links"></div>
           <ul class="header2-links__list">
             <li class="header2-links__item"><a href="#" target="blank" class="header-links__item-link">Карта проезда</a></li>
             <li class="header2-links__item"><a href="#" target="blank" class="header-links__item-link">История заказов</a></li>
@@ -74,9 +75,9 @@
           </div>
         </nav>
     <header class="current-section">
-      <p class="current-section__name">Мобильные телефоны</p>
+      <h1 class="current-section__name">Мобильные телефоны</h1>
     </header>
-    <sidebar class="sidebar">
+    <aside class="sidebar">
       <section class="preferences">
         <ul class="preferences__list">
           <li class="preferences__item">Флагманы</li>
@@ -114,12 +115,29 @@
                   <li class="brands__item">
                     <input type="checkbox" id="checkbox__item_5" class="checkbox__item"><span class="checkbox__value">Motorola</span>
                   </li>
+                  <li class="os__reset">
+                    <input type="reset" id="reset__button" value="Сбросить фильтр" class="reset__button">
+                  </li>
                 </ul>
               </section>
               <section class="price">
                 <div class="price__slider"></div>
               </section>
               <section class="color">
+                    <ul class="colors__list">
+                      <li class="color__item_1"></li>
+                      <li class="color__item_2"></li>
+                      <li class="color__item_3"></li>
+                      <li class="color__item_4"></li>
+                      <li class="color__item_5"></li>
+                      <li class="color__item_6"></li>
+                      <li class="color__item_7"></li>
+                      <li class="color__item_8"></li>
+                      <li class="color__item_9"></li>
+                      <li class="color__item_10"></li>
+                      <li class="color__item_11"></li>
+                      <li class="color__item_12"></li>
+                    </ul>
               </section>
               <section class="os">
                 <ul class="os__list">
@@ -138,18 +156,34 @@
                   <li class="os__item">
                     <input type="checkbox" id="checkbox__item_5" class="checkbox__item"><span class="checkbox__value">Custom</span>
                   </li>
+                  <li class="os__reset">
+                    <input type="reset" id="reset__button" value="Сбросить фильтр" class="reset__button">
+                  </li>
                 </ul>
-              </section>
-              <section class="reset">
-                <input type="reset" id="reset__button" value="Сбросить фильтр" class="reset__button">
               </section>
             </li>
           </ul>
         </form>
       </section>
-    </sidebar>
-    <p>My fucking first page!!!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Liberesse culpa harum, molestiae et id dolore numquam non facere cum. Repudiandae tenetur illum sed corporis, beatae reprehenderit eligendi sint.</p>
+    </aside>
+    <div class="container">
+      <section class="content-header">
+        <div class="price-filter">
+          <form method="post" id="price-form" action="#" class="price-filter__form"><span class="filter_span">Сортировать по</span>
+            <select type="select" name="select__item" id="select__item" class="select">
+              <option form="price__form" class="select__item">По цене</option>
+              <option form="price__form" class="select__item">По популярности</option>
+            </select>
+          </form>
+        </div>
+        <div class="view-options"><span class="view-options__text">Вид каталога
+            <ul class="view-list">
+              <li class="view-item_detailed-list">Detailed list</li>
+              <li class="view-item_thumbnails">Thumbnails</li>
+              <li class="view-item_list">List</li>
+            </ul></span></div>
+      </section>
+    </div>
     <footer class="footer clearfix"><img src="../../img/footer-logo.png" alt="footer-logo" class="footer__logo">
           <div class="footer__social">
             <ul class="footer__social__list">

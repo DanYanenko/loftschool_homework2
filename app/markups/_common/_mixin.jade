@@ -16,7 +16,23 @@ mixin nav(className, items, activeIndex)
 		if block
 			block
 
-//- mixin colorList(colors)
-//- 	ul.color__list
-//- 		-for(var item=1;item<=colors;item++)
-//- 			li.color__item_+item
+mixin colorList(colors)
+	ul(class="colors__list")
+		-for(var item=1;item<=colors;item++)
+			li(class="color__item_"+item)
+mixin content(products)
+	ul.models__list
+		for (var index in products)	
+			li(class='models__item_'+index)
+				.slideshow-block
+					span(class=('part-number'))='Артикул' + products[index]['partNumber']
+				h2.model-name= products[index]['modelName']
+				.desc-block= products[index]['description']
+				.rating-widget widget
+				.price= products[index]['price']
+				.to-basket
+					form.to-basket__form(method="post" action="#" id="to-basket__form" name="to-basket__form")
+						input.to-basket-button(type="button" name="to-basket-button" id="to-basket-button" value="В корзину")
+				.availability-state
+					li.availability-state__available
+						span В наличии

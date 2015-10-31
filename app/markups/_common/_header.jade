@@ -9,9 +9,10 @@ header.header.clearfix
 	.header2-content
 		img.logo(src="../../img/logo.png" alt="logo")
 		.search-block
-			input.search-block__textinput(type='text' placeholder="Что будем искать")
-			input.search-block__buttoninput(type='submit' value="Найти")
-		.header2-links
+			form.search-form(method="post" id="search-form" action="#")
+				input.search-block__textinput(type='search' placeholder="Что будем искать")
+				input.search-block__buttoninput(type="submit" value="Найти")
+			.header2-links
 			ul.header2-links__list
 				- headerLinks=['Карта проезда', 'История заказов', 'Корзина']
 				each val in headerLinks

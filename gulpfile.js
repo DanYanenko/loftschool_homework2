@@ -92,7 +92,10 @@ gulp.task('html', function () {
         .pipe(gulp.dest('./dist/'));
 });
 
-
+gulp.task('minJS', function(){
+	return gulp.src('app/prod.js')
+	.pipe(uglify());
+});
 
 gulp.task('default', ['watch','server', ]);
 
