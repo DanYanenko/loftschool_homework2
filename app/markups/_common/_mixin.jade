@@ -21,15 +21,15 @@ mixin colorList(colors)
 		-for(var item=1;item<=colors;item++)
 			li(class="color__item_"+item)
 mixin content(products)
-	ul.models__list
-		for (var index in products)	
+	ul.models__List
+		-for(var ind in products)
 			li(class='models__item_'+index)
 				.slideshow-block
-					span(class=('part-number'))='Артикул' + products[index]['partNumber']
-				h2.model-name= products[index]['modelName']
-				.desc-block= products[index]['description']
+					span(class='part-number')='Артикул ' + products[ind].partNumber
+				h2.model-name= products[ind].modelName
+				.desc-block= products[ind].description
 				.rating-widget widget
-				.price= products[index]['price']
+				.price= products[ind].price
 				.to-basket
 					form.to-basket__form(method="post" action="#" id="to-basket__form" name="to-basket__form")
 						input.to-basket-button(type="button" name="to-basket-button" id="to-basket-button" value="В корзину")
