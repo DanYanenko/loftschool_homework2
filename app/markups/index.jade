@@ -9,7 +9,7 @@ block content
 		section.content-header
 			.price-filter
 				form.price-filter__form(method="post" id="price-form" action="#")
-					span.filter_span Сортировать по
+					span.filter_span Сортировать по0000000
 					select.select(type="select" name="select__item" id="select__item")
 						option.select__item(form="price__form") По цене
 						option.select__item(form="price__form") По популярности
@@ -168,7 +168,8 @@ block content
 								}
 							};
 						
-		+content(products)
+	+content(products)
+	+nav('page-numbers', {'<':'#', '1':'#', '2':'#', '3':'#', '4':'#', '5':'#', '>':'#'}, 1)
 		
 
 

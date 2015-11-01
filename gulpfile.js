@@ -16,7 +16,7 @@ var
     gutil = require('gulp-util');
  
 gulp.task('jade',function(){
-	gulp.src('app/markups/**/*.jade')
+	gulp.src('app/markups/index.jade')
 		.pipe(jade({
 			pretty:true
 		}))
@@ -90,11 +90,6 @@ gulp.task('html', function () {
         .pipe(assets.restore())
         .pipe(useref())
         .pipe(gulp.dest('./dist/'));
-});
-
-gulp.task('minJS', function(){
-	return gulp.src('app/prod.js')
-	.pipe(uglify());
 });
 
 gulp.task('default', ['watch','server', ]);
