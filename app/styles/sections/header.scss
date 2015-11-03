@@ -1,0 +1,103 @@
+@import "../_misc/mixins";
+.clearfix:before{
+	content:"";
+	display:table;
+}
+.clearfix:after{
+	@extend .clearfix:before;
+	clear:both;
+}
+
+.header{
+	box-sizing: border-box;
+	position:relative;
+	height:173px;
+	&1-container{
+		.header1-content {
+			margin:0 auto;
+			box-sizing:border-box;
+			width:1099px;
+			padding-top:25px;
+			height:77px;
+			$socials:FB VK TW;
+			@include social(header,left,16px,26px, $socials);
+			.address{
+				position:relative;
+				display: block;
+				float:right;
+				text-decoration:none;
+				font-style:normal;
+				&__list{
+					list-style-type:none;
+					margin:0;
+					padding:0;
+					.address__string{
+						display:inline-block;
+						position:relative;
+						padding-left:20px;
+						text-decoration:none;
+						font-family:'Opensans_regular';
+						font-size:14px;
+						background:url('../../img/map-pin.png') no-repeat 0 center;
+					}
+					.phone__string{
+						margin-left:86px;
+						display:inline-block;
+						position:relative;
+						padding-left:20px;
+						text-decoration:none;
+						background:url('../../img/telephone.png') no-repeat 0 center;
+						.phone__string__link{
+							color:#333333;
+							font-size:18px;
+							font-family: 'Open_sanssemibold';
+						}
+					}
+				}
+			}
+		}
+	}
+	&2-container{
+		background-color:#f4f4f4;
+		.header2-content {			
+			width:1099px;
+			margin:0 auto;
+			box-sizing:border-box;
+			height:96px;
+			padding-top:32px;
+			.search-block {
+				display:inline-table;
+				vertical-align:top;
+				margin-left:58px;
+			}
+			.header2-links{
+				display:inline-table;
+				vertical-align:top;
+				margin-left:50px;
+				&__list{
+					margin:0; 
+					padding:0;
+					list-style-type:none;
+				}
+				&__item{
+					display:inline-block;
+					&:first-child{
+						margin-left:0;
+					}
+					margin-left:33px;
+				}
+				&__item-link{
+					display:inline-block;
+					font-size:16px;
+					font-family: 'Opensans_semibold';
+					color:#333333;
+					&:hover{
+						color:#ff6600;
+					}
+				}
+			}	
+		}
+	}		
+}
+
+		

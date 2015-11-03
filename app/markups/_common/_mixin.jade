@@ -20,19 +20,21 @@ mixin colorList(colors)
 	ul(class="colors__list")
 		-for(var item=1;item<=colors;item++)
 			li(class="color__item_"+item)
+				.color__item__border
 mixin content(products)
-	ul.models__List
+	ul.models__list
 		-for(var ind in products)
-			li(class='models__item_'+index)
+			li(class='models__item')
 				.slideshow-block
 					span(class='part-number')='Артикул ' + products[ind].partNumber
-				h2.model-name= products[ind].modelName
-				.desc-block= products[ind].description
-				.rating-widget widget
-				.price= products[ind].price
+				.model-main-info
+					h2.model-name= products[ind].modelName
+					.desc-block= products[ind].description
+					.rating-widget widget
 				.to-basket
+					.price= products[ind].price
 					form.to-basket__form(method="post" action="#" id="to-basket__form" name="to-basket__form")
 						input.to-basket-button(type="button" name="to-basket-button" id="to-basket-button" value="В корзину")
-				.availability-state
-					li.availability-state__available
-						span В наличии
+					.availability-state
+						.availability-state__available
+							span.availability-state__text В наличии

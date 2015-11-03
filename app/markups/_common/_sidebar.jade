@@ -1,64 +1,82 @@
 include _mixin.jade
 aside.sidebar
+	block nav-history
+		+nav('nav-history', history, 2)
+			h1.current-section__name= currentPage
 	section.preferences
 		ul.preferences__list
-			li.preferences__item Флагманы
-			li.preferences__item Бюджетная линейка
+			li.preferences__item_active
+				a.preferences__item__link_active(href="#") Флагманы
+			li.preferences__item 
+				a.preferences__item__link(href="#") Бюджетная линейка
 	section.selection_settings
 		form.settings__filter(method="post" action="#")
 			ul.accordion__list
 				li.accordion__item
-					section.presence
-						ul.presence__list
-							li.presence__item
-								input.radiobutton__item(type="radio" name="radiobutton__item" id="radiobutton__item_1")
-								span.radiobutton__value Во всех магазинах
-							li.presence__item
-								input.radiobutton__item(type="radio" name="radiobutton__item" id="radiobutton__item_2")
-								span.radiobutton__value В ближайшем ко мне магазине
-					section.brands
-						ul.brands__list
-							li.brands__item
-								input.checkbox__item(type="checkbox" id="checkbox__item_1")
-								span.checkbox__value Lenovo
-							li.brands__item
-								input.checkbox__item(type="checkbox" id="checkbox__item_2")
-								span.checkbox__value Apple
-							li.brands__item
-								input.checkbox__item(type="checkbox" id="checkbox__item_3")
-								span.checkbox__value Samsung
-							li.brands__item
-								input.checkbox__item(type="checkbox" id="checkbox__item_4")
-								span.checkbox__value Asus
-							li.brands__item
-								input.checkbox__item(type="checkbox" id="checkbox__item_5")
-								span.checkbox__value Motorola
-							li.os__reset
-								input.reset__button(type="reset" id="reset__button" value="Сбросить фильтр")
-					section.price
-						.price__slider
-					section.color
-						-var colors = 12
-						+colorList(colors)
-					section.os
-						ul.os__list
-							li.os__item
-								input.checkbox__item(type="checkbox" id="checkbox__item_1")
-								span.checkbox__value Android
-							li.os__item
-								input.checkbox__item(type="checkbox" id="checkbox__item_2")
-								span.checkbox__value iOS
-							li.os__item
-								input.checkbox__item(type="checkbox" id="checkbox__item_3")
-								span.checkbox__value Windows Mobile
-							li.os__item
-								input.checkbox__item(type="checkbox" id="checkbox__item_4")
-								span.checkbox__value Symbian
-							li.os__item
-								input.checkbox__item(type="checkbox" id="checkbox__item_5")
-								span.checkbox__value Custom
-							li.os__reset
-								input.reset__button(type="reset" id="reset__button" value="Сбросить фильтр")
+					h2.accordion__item_header Наличие в магазинах
+					.accordion__item_arrow Стрелка для аккордеона
+					ul.presence__list
+						li.presence__item
+							input.radiobutton__item(type="radio" name="radiobutton__item" id="radiobutton__item_1")
+							span.radiobutton__value Во всех магазинах
+						li.presence__item
+							input.radiobutton__item(type="radio" name="radiobutton__item" id="radiobutton__item_2")
+							span.radiobutton__value В ближайшем ко мне магазине
+				li.accordion__item
+					h2.accordion__item_header Бренды
+					.accordion__item_arrow Стрелка для аккордеона
+					ul.brands__list
+						li.brands__item
+							input.checkbox__item(type="checkbox" id="checkbox__item_1")
+							span.checkbox__value Lenovo
+						li.brands__item
+							input.checkbox__item(type="checkbox" id="checkbox__item_2")
+							span.checkbox__value Apple
+						li.brands__item
+							input.checkbox__item(type="checkbox" id="checkbox__item_3")
+							span.checkbox__value Samsung
+						li.brands__item
+							input.checkbox__item(type="checkbox" id="checkbox__item_4")
+							span.checkbox__value Asus
+						li.brands__item
+							input.checkbox__item(type="checkbox" id="checkbox__item_5")
+							span.checkbox__value Motorola
+						li.brands__reset
+							label.label_reset
+								span.reset_text Сбросить фильтр
+								input.reset__button(type="reset" id="reset__button_brands" value="Сбросить фильтр")
+				li.accordion__item
+					h2.accordion__item_header Цена
+					.accordion__item_arrow Стрелка для аккордеона
+					.price__slider
+				li.accordion__item
+					h2.accordion__item_header Цвет
+					.accordion__item_arrow Стрелка для аккордеона
+					-var colors = 12
+					+colorList(colors)
+				li.accordion__item
+					h2.accordion__item_header Операционные системы
+					.accordion__item_arrow Стрелка для аккордеона
+					ul.os__list
+						li.os__item
+							input.checkbox__item(type="checkbox" id="checkbox__item_1")
+							span.checkbox__value Android
+						li.os__item
+							input.checkbox__item(type="checkbox" id="checkbox__item_2")
+							span.checkbox__value iOS
+						li.os__item
+							input.checkbox__item(type="checkbox" id="checkbox__item_3")
+							span.checkbox__value Windows Mobile
+						li.os__item
+							input.checkbox__item(type="checkbox" id="checkbox__item_4")
+							span.checkbox__value Symbian
+						li.os__item
+							input.checkbox__item(type="checkbox" id="checkbox__item_5")
+							span.checkbox__value Custom
+						li.os__reset
+							label.label_reset
+								span.reset_text Сбросить фильтр
+								input.reset__button(type="reset" id="reset__button_os" value="Сбросить фильтр")
 
 					
 

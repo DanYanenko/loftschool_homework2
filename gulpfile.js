@@ -23,14 +23,24 @@ gulp.task('jade',function(){
 		.pipe(gulp.dest('app/'));	
 });
 
+gulp.task('watchJade', function(){
+	gulp.watch([
+		'app/markups/index.jade'
+		], ['jade']);
+});
+
 gulp.task('css', function () {
-  return gulp.src('app/styles/main.scss')
+  return gulp.src('app/styles/**/*.scss')
   	.pipe(sass())
   	.pipe(autoprefixer('last 15 versions'))
     .pipe(gulp.dest('app/css/'));
 });
 
-
+gulp.task('watchCss', function(){
+	gulp.watch([
+		'app/styles/**/*.scss'
+		], ['css']);
+});
 
 gulp.task('minCss', function(){
 return gulp.src('app/css/main.css')
@@ -62,13 +72,10 @@ gulp.task('bower', function () {
 
 gulp.task('watch', function(){
 	gulp.watch([
-		'app/css/**/*.css',
-		'app/styles/*.scss',
-		'app/*.html',
 		'app/js/*.js',
-		'app/markups/**/*.jade',
-		'bower.json'	
-		],['css','bower','jade']).on('change', browserSync.reload);
+		'app/css/**/*.css',
+		'app/*.html'
+		]).on('change', browserSync.reload);
 });
 
 
@@ -92,7 +99,7 @@ gulp.task('html', function () {
         .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('default', ['watch','server', ]);
+gulp.task('default', ['server','watch']);
 
 
 

@@ -1,0 +1,36 @@
+@mixin social ($mainTag, $float,$margin-left, $dimension, $socials){
+	.#{$mainTag}__social{
+				position: relative;
+				height:$dimension;
+				width:auto;
+				float:$float;
+				&__list{
+					margin:0;
+					padding:0;
+					list-style-type:none;
+					.#{$mainTag}__social__item{
+						display: inline-block;
+						vertical-align: top;
+						margin-left:$margin-left;
+						width: $dimension;
+						height:$dimension;
+						&:first-child{ 
+							margin-left:0px;	
+						}
+						@each $social in $socials{
+							.#{$mainTag}__social__link_#{$social}{
+								position:relative;
+								display:block;
+								background-image: url('../../img/#{$mainTag}-#{$social}.png');
+								text-indent: -9999px;
+								height: 100%;
+								width: 100%;
+								&:hover{
+									background-image: url('../../img/#{$mainTag}-#{$social}-hover.png');
+								}
+							}
+						}	
+					}
+				}
+			}
+}

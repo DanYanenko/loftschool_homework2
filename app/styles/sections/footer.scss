@@ -1,0 +1,8 @@
+@import "../_misc/mixins";
+.footer{
+	background: url('../../img/pattern.png');
+	$socials:FB VK TW;
+	@include social(footer,right,26px,44px, $socials);
+}
+
+

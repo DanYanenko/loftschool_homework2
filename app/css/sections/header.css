@@ -1,24 +1,128 @@
-html{
-	background-image: linear-gradient( 0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
-	margin:0;
-	padding:0;
-	color: blue;
-	font-size: 16px;
-	font-family: Arial;
-	text-align: center;
-	vertical-align: top;
-	
-}
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
 
-p{
-	width: 100px;
-	text-align: justify;
-	height: 200px;
-	color:orange;
-	display: flex;
-	
-}
+.clearfix:after {
+  clear: both; }
 
-ul{
-	list-style-type: none;
-}
+.header {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  height: 173px; }
+  .header1-container .header1-content {
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 1099px;
+    padding-top: 25px;
+    height: 77px; }
+    .header1-container .header1-content .header__social {
+      position: relative;
+      height: 26px;
+      width: auto;
+      float: left; }
+      .header1-container .header1-content .header__social__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none; }
+        .header1-container .header1-content .header__social__list .header__social__item {
+          display: inline-block;
+          vertical-align: top;
+          margin-left: 16px;
+          width: 26px;
+          height: 26px; }
+          .header1-container .header1-content .header__social__list .header__social__item:first-child {
+            margin-left: 0px; }
+          .header1-container .header1-content .header__social__list .header__social__item .header__social__link_FB {
+            position: relative;
+            display: block;
+            background-image: url("../../img/header-FB.png");
+            text-indent: -9999px;
+            height: 100%;
+            width: 100%; }
+            .header1-container .header1-content .header__social__list .header__social__item .header__social__link_FB:hover {
+              background-image: url("../../img/header-FB-hover.png"); }
+          .header1-container .header1-content .header__social__list .header__social__item .header__social__link_VK {
+            position: relative;
+            display: block;
+            background-image: url("../../img/header-VK.png");
+            text-indent: -9999px;
+            height: 100%;
+            width: 100%; }
+            .header1-container .header1-content .header__social__list .header__social__item .header__social__link_VK:hover {
+              background-image: url("../../img/header-VK-hover.png"); }
+          .header1-container .header1-content .header__social__list .header__social__item .header__social__link_TW {
+            position: relative;
+            display: block;
+            background-image: url("../../img/header-TW.png");
+            text-indent: -9999px;
+            height: 100%;
+            width: 100%; }
+            .header1-container .header1-content .header__social__list .header__social__item .header__social__link_TW:hover {
+              background-image: url("../../img/header-TW-hover.png"); }
+    .header1-container .header1-content .address {
+      position: relative;
+      display: block;
+      float: right;
+      text-decoration: none;
+      font-style: normal; }
+      .header1-container .header1-content .address__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0; }
+        .header1-container .header1-content .address__list .address__string {
+          display: inline-block;
+          position: relative;
+          padding-left: 20px;
+          text-decoration: none;
+          font-family: 'Opensans_regular';
+          font-size: 14px;
+          background: url("../../img/map-pin.png") no-repeat 0 center; }
+        .header1-container .header1-content .address__list .phone__string {
+          margin-left: 86px;
+          display: inline-block;
+          position: relative;
+          padding-left: 20px;
+          text-decoration: none;
+          background: url("../../img/telephone.png") no-repeat 0 center; }
+          .header1-container .header1-content .address__list .phone__string .phone__string__link {
+            color: #333333;
+            font-size: 18px;
+            font-family: 'Open_sanssemibold'; }
+  .header2-container {
+    background-color: #f4f4f4; }
+    .header2-container .header2-content {
+      width: 1099px;
+      margin: 0 auto;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+      height: 96px;
+      padding-top: 32px; }
+      .header2-container .header2-content .search-block {
+        display: inline-table;
+        vertical-align: top;
+        margin-left: 58px; }
+      .header2-container .header2-content .header2-links {
+        display: inline-table;
+        vertical-align: top;
+        margin-left: 50px; }
+        .header2-container .header2-content .header2-links__list {
+          margin: 0;
+          padding: 0;
+          list-style-type: none; }
+        .header2-container .header2-content .header2-links__item {
+          display: inline-block;
+          margin-left: 33px; }
+          .header2-container .header2-content .header2-links__item:first-child {
+            margin-left: 0; }
+        .header2-container .header2-content .header2-links__item-link {
+          display: inline-block;
+          font-size: 16px;
+          font-family: 'Opensans_semibold';
+          color: #333333; }
+          .header2-container .header2-content .header2-links__item-link:hover {
+            color: #ff6600; }

@@ -5,8 +5,10 @@ html(lang="ru=RU")
 	body
 		include ./_header.jade
 		include ./_nav.jade
-		include ./_sidebar.jade
-		block content
-		include ./_footer.jade
-		include ./_foot.jade
+		.container
+			.main-content.clearfix
+				include ./_sidebar.jade
+				block content
+			include ./_footer.jade
+			include ./_foot.jade
 
