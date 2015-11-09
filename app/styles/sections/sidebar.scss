@@ -1,74 +1,25 @@
-@mixin preferences_links($bg,$mod){
-	.preferences__item#{$mod}{
-		background-color:$bg;
-		padding-left:30px;
-		.preferences__item__link#{$mod}{
-			line-height:45px;
-			color: #666666;
-			font-size:14px;
-			font-family:'Opensans_regular';
-			text-decoration:none;
-		}
-	}
-}	
-@mixin borders(){
-	border: solid #cccccc 1px;
-	border-radius: 6px;
-	overflow:hidden;
-}
+@import '../_misc/mixins.scss';
 
 .sidebar{
 	float:left;
 }
 
-@mixin colors($colors-list){
-	@each $current-color in $colors-list {
-		$i:index($colors-list,$current-color);
-		.color__item_#{$i}{
-			display:inline-table;
-			border-width: 1px;
-			border-color: rgb(222, 225, 228);
-		 	border-style: solid;
-		 	box-sizing:border-box;
-		 	margin-bottom:22px;
-			background-color: $current-color;
-			width: 35px;
-			height: 35px;
-			z-index: 164;
-			cursor:pointer;
-			&:nth-child(4n+1){
-				margin-left:0;
-			}
-			margin-left:22px;
-			.color__item__border{
-				visibility:hidden;
-				border-width: 1.5px;
-				border-color: rgb(255, 102, 0);
-				border-style: solid;
-				width: 38px;
-				height: 38px;
-				z-index: 167;
-			}
-			&:hover{
-				.color__item__border{visibility:visible;}
-			}
-		}
-	}
-}
-
-				 
+			 
 
 .nav-history{
-	padding-top:34px;
-	margin-bottom:34px;
+	margin-top:34px;
+	margin-bottom:30px;
+	&__container{
+		margin-bottom:26px;
+	}
 	.nav-history__list{
 		font-size:12px;
-		margin-bottom:28px;
+		
 	}
 	.nav-history__item{
 		display:inline-block;
 		.nav-history__link{
-			font-family:'Opensans_regular';
+			font-family:'open_sansregular';
 			font-size:14px;
 			color:#333333;
 			text-decoration:none;
@@ -84,7 +35,7 @@
 		display:inline-block;
 		.nav-history__link{
 			color:#ff6600;
-			font-family:'Opensans_regular';
+			font-family:'open_sansregular';
 			font-size:14px;
 		}
 		
@@ -93,7 +44,7 @@
 	.current-section__name{
 		margin:0;
 		padding:0;
-		font-family:'Opensans_bold';
+		font-family:'open_sansbold';
 		font-size:20px;
 		
 	}
@@ -114,27 +65,29 @@
 		@include borders();
 		.accordion__item_header{
 			position:relative;
-			font-family:"Opensans_semibold";
+			font-family:'open_sanssemibold';
 			font-size:16px;
 			color:#333333;
 			margin-top:0;
 			margin-bottom:21px;
-			display:inline-block;
+			display:block;
 			vertical-align:top;
-			width:262px;
+			
+			cursor:pointer;
 			
 		}
+		
+		
 		.accordion__item_arrow{
-			text-indent:-9999px;
-			position:relative;
-			display:inline-block;
-			&:hover{
-				background:url('../../img/arrow_down.png') no-repeat 0 4px;
+			float: right;
+			margin-right: 10px;
+			@include arrow();
+			background:url('../img/arrow.png') no-repeat 0 4px;
 			}
-			background:url('../../img/arrow.png') no-repeat 0 4px;
-			width:18px;
-			height:17px;
-			}
+
+		.arrow_down{  // Разворот стрелки при раскрытии аккордеона
+			background:url('../img/arrow_down.png') no-repeat 0 4px;
+		}	
 		.accordion__item{
 			&:first-child{
 				margin-top:16px;
@@ -150,15 +103,24 @@
 			*[class*="list"]{ list-style-type:none;}
 		}
 		*[class*="value"]{
-			font-family:"Opensans_semibold";
-			font-size:16px;
+			font-family:'open_sansregular';
+			font-size:14px;
 			color:#333333;
 		}
 		*[class$="__item"], *[class$="_reset"]{
 			margin-bottom:16px;
+			display: block;
 		}
-		*[class="radiobutton__value"], *[class="checkbox__value"]{
+		
+		.accordion__item{
+			margin-bottom:16px;
+			display: block;
+		}
+
+		.radiobutton__value, .checkbox__value{
 			margin-left:10px;
+			display:inline-block;
+			vertical-align:middle;
 		}
 		.reset__button{
 			position:absolute;	
@@ -166,7 +128,7 @@
 		}
 
 		.reset_text{
-			font-family:"Opensans_regular";
+			font-family:'open_sansregular';
 			font-size:14px;
 			color:#6699ff;
 			text-decoration:underline;
@@ -174,11 +136,70 @@
 		}
 		.colors__list{
 			font-size:0;
-			width:260px;
+			width:206px;
 			$bg:#ffffff #cccccc #000000 #0a3153 #ff1800 #fff343 #fb914a #92c37c #40a6ff #9870ad #dc78ad #7f401d;
 			@include colors($bg);
 		}	
 	}
+.checkbox-wrapper, .radiobutton-wrapper{
+	display:inline-block;
+	position:relative;
+	cursor:pointer;
+}
+
+.checkbox__item,.radiobutton__item{
+	position:absolute;
+	margin-left:-9999px;
+}
+
+@include fake(checkbox){
+	background-image:url('../img/checkbox-unactive.png');
+}
+.checkbox__item:active + .fake-checkbox{
+			background-image: url('../img/checkbox-active-hover.png');
+		}
+.checkbox__item:checked + .fake-checkbox{
+		background-image: url('../img/checkbox-active.png');
+	}
+
+@include fake(radiobutton){
+	background-image:url('../img/radiobutton-unchecked.png');
+}
+.radiobutton__item:checked + .fake-radiobutton{
+		background-image: url('../img/radiobutton-checked.png');
+	}
+.radiobutton__item:active + .fake-radiobutton{
+		background-image: url('../img/radiobutton-active.png');
+	}
+
+
+.price__slider{
+	font-size:12px;
+	@include slider-range(min);
+	@include slider-range(max);
+	margin-bottom:33px;
+	.range-block{
+		margin-bottom: 18px;
+
+		.min-range{
+			display: inline-block;
+		}
+	
+		.max-range{
+			margin-left: 47px;
+		}
+
+		.min-range__input,.max-range__input{
+			margin-left:8px;
+		}
+
+	}
+}
+
+.accordion__inner__list{
+	display:none;
+}
+
 
 
 

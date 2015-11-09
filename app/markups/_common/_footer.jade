@@ -2,12 +2,12 @@ include _mixin.jade
 footer.footer.clearfix
 	img.footer__logo(src="./img/footer-logo.png" alt="footer-logo")
 	//- socials={'vk':'http://vk.com/daniilyanenko', 'fb':'http://www.facebook.com/daniil.yanenko', 'twitter':'http://twitter.com'};
-	+iterate('footer__social', socials)
+	.footer__right-column.clearfix
+		+iterate('footer__social', socials)
 
-	- footerLinks = {'Планшеты': '#', 'Мобильные телефоны': '#', 'Mp3 плееры': '#', 'Персональные компьютеры': '#', 'Ноутбуки': '#', 'Аксессуары': '#', 'Бытовая техника': '#'}
-	+nav('footer__nav', footerLinks)
-	p.copyright All rights reserved. 2015. no copy allowed
-		
+		- footerLinks = {'Планшеты': '#', 'Мобильные телефоны': '#', 'Mp3 плееры': '#', 'Персональные компьютеры': '#', 'Ноутбуки': '#', 'Аксессуары': '#', 'Бытовая техника': '#'}
+			+nav('footer__nav', footerLinks)
+	p.copyright All rights reserved. 2015. no copy allowed		
 		
 
 

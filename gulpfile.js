@@ -32,7 +32,7 @@ gulp.task('watchJade', function(){
 gulp.task('css', function () {
   return gulp.src('app/styles/**/*.scss')
   	.pipe(sass())
-  	.pipe(autoprefixer('last 15 versions'))
+  	.pipe(autoprefixer('Firefox > 20'))
     .pipe(gulp.dest('app/css/'));
 });
 

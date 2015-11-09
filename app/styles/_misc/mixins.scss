@@ -1,9 +1,8 @@
-@mixin social ($mainTag, $float,$margin-left, $dimension, $socials){
+@mixin social ($mainTag,$margin-left, $dimension, $socials){
 	.#{$mainTag}__social{
 				position: relative;
 				height:$dimension;
 				width:auto;
-				float:$float;
 				&__list{
 					margin:0;
 					padding:0;
@@ -21,16 +20,269 @@
 							.#{$mainTag}__social__link_#{$social}{
 								position:relative;
 								display:block;
-								background-image: url('../../img/#{$mainTag}-#{$social}.png');
+								background-image: url('../img/#{$mainTag}-#{$social}.png');
 								text-indent: -9999px;
 								height: 100%;
 								width: 100%;
 								&:hover{
-									background-image: url('../../img/#{$mainTag}-#{$social}-hover.png');
+									background-image: url('../img/#{$mainTag}-#{$social}-hover.png');
 								}
 							}
 						}	
 					}
 				}
 			}
+}
+
+@mixin fake($type){
+	.fake-#{$type}{
+	word-wrap:break-word;
+    width: 200px;
+	display:inline-block;
+	vertical-align:middle;
+	width:19px;
+	height: 19px;
+	@content;
+	}
+	
+}
+
+@mixin preferences_links($bg,$mod){
+	.preferences__item#{$mod}{
+		background-color:$bg;
+		.preferences__item__link#{$mod}{
+			padding-left:30px;
+			display:block;
+			height:45px;
+			line-height:45px;
+			color: #666666;
+			font-size:14px;
+			font-family:'open_sansregular';
+			text-decoration:none;
+		}
+	}
+}	
+@mixin borders(){
+	border: solid #cccccc 1px;
+	border-radius: 6px;
+	overflow:hidden;
+}
+@mixin colors($colors-list){
+	@each $current-color in $colors-list {
+		$i:index($colors-list,$current-color);
+		.color__item_#{$i}{
+			display:inline-block;
+			border-width: 1px;
+			border-color: rgb(222, 225, 228);
+		 	border-style: solid;
+		 	box-sizing:border-box;
+		 	margin-bottom:22px;
+			background-color: $current-color;
+			width: 35px;
+			height: 35px;
+			z-index: 164;
+			cursor:pointer;
+			&:nth-child(4n+1){
+				margin-left:0;
+			}
+			margin-left:22px;
+			&:hover{
+				border-color: rgb(255, 102, 0);
+			}
+		}
+	}
+}
+
+
+
+@mixin slider-range($sliderItem){
+		.#{$sliderItem}-range{
+		font-family: 'open_sansregular';
+		font-size:14px;
+		color: #333333;
+		&__input{
+		 	border-style: solid;
+			border-width: 1px;
+			border-color: rgb(235, 237, 239);
+			border-radius: 3px;
+			background-color: rgb(255, 255, 255);
+			box-shadow: inset 0px 1px 1px 0px rgba(148, 148, 148, 0.169);
+			width: 79px;
+			height: 26px;
+			font-family: 'open_sanssemibold';
+			font-size:14px;
+			color: #333333;
+			outline:none;
+			padding-left:8px;
+
+		}
+	}
+}	
+
+@mixin arrow(){
+			text-indent:-9999px;
+			position:relative;
+			display:inline-block;
+			width:18px;
+			height:17px;
+			@content;
+		}
+
+
+@mixin borders(){
+	border: solid #cccccc 1px;
+	border-radius: 6px;
+	overflow:hidden;
+}
+@mixin view($type){
+	@each $view in $type{
+		li.view__item_#{$view}{
+			position:relative;
+			display:inline-block;
+			@if ($view: detailed-list){
+				    background: url("../img/view-#{$view}-active.png") no-repeat center;
+			}
+			background: url("../img/view-#{$view}-unactive.png") no-repeat center;
+			text-indent: -9999px;
+			height: 50px;
+			width: 50px;
+			/*&:hover{
+				background-image: url('../../img/#{$view}-hover.png');
+			}*/
+		}
+	}	
+}
+
+@mixin slideShow(){
+	@content;
+	.slideshow__main{
+		position:relative;
+		border-width: 1px;
+		border-color: rgb(222, 225, 228);
+		border-style: solid;
+		border-radius: 2px;		
+		width: 134px;
+		height: 134px;
+		margin-left: 21px;
+		margin-bottom:15px;
+
+		&__picture{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			margin: auto;
+			max-width: 134px;
+			max-height: 134px;
+			
+		}
+	}
+		
+	.slideshow__list{
+		list-style-type:none;
+		margin-bottom: 15px;
+		margin-left: 21px;
+	}
+	.slideshow__item{
+		border-width: 1px;
+		border-color: rgb(222, 225, 228);
+		border-style: solid;
+		border-radius: 2px;
+		width: 32px;
+		height: 32px;
+		overflow: hidden;
+		float:left;
+		margin-left:17px;
+		&:first-child{
+			margin-left:0;
+		}
+		&:hover{
+			border-color: rgb(255, 102, 0);
+		}
+	}
+}
+
+@mixin partNumber(){
+	
+	position: relative;
+	font-size:0;
+	.part-number{
+		position: relative;
+		display: block;
+		float:left;
+		width: 53px;
+		word-break: break-all;
+		font-size:12px;
+		font-family:'open_sanssemibold';
+		color:#666666;
+	}
+	.part-number-value{
+		position: relative;
+		display: block;
+		float:left;
+		width: 48px;
+		word-break: break-all;
+		font-size:14px;
+		font-family:'open_sansbold';
+		color:#333333;
+		margin-left:5px;
+	}
+	@content;
+}
+
+@mixin price(){
+	
+	
+	font-family: 'open_sanssemibold';
+	color: rgb(51, 51, 51);
+	line-height: 20px;
+	height: 20px;
+	@content;
+}
+
+@mixin basketButton(){
+	
+	padding: 0;
+    border-radius: 5px;
+    background-image: linear-gradient(56deg, #ff6600 0%, #ff6a1b 45%, #ff6e35 99%);
+    width: 103px;
+    height: 33px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    font-family: 'open_sansbold';
+    line-height: 20px;
+    color: #ffffff;
+    @content;
+}
+
+@mixin roubleSign(){
+	
+	font-family: 'PTRoubleDecorative';
+	font-size:20px;
+	line-height:20px;
+	@content;
+}
+
+
+@mixin availability(){	
+	.availability-state__text{
+	    font-size: 12px;
+	    font-family: 'open_sansbold';
+	    color: rgb(127, 127, 127);
+	    line-height: 1.667;
+	 	//text-align: justifyLeft;
+	 	&:before{
+	 		position:relative;
+	 		display:inline-block;
+	 		content:"";
+	 		border-radius: 50%;
+  			background-color: rgb(96, 172, 73);
+  			width: 7px;
+  			height: 7px;
+  			margin-right:8px;
+	 	}
+	}
+	@content;
 }

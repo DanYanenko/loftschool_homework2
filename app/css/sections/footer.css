@@ -1,10 +1,20 @@
 .footer {
-  background: url("../../img/pattern.png"); }
+  position: relative;
+  height: 221px;
+  width: 100%;
+  min-width: 1300px;
+  background: url("../img/pattern.png"); }
+  .footer__logo {
+    margin-left: 79px;
+    margin-top: 72px;
+    float: left; }
+  .footer .footer__right-column {
+    float: right;
+    margin-bottom: 17px; }
   .footer .footer__social {
     position: relative;
-    height: 44px;
-    width: auto;
-    float: right; }
+    height: 43px;
+    width: auto; }
     .footer .footer__social__list {
       margin: 0;
       padding: 0;
@@ -13,34 +23,66 @@
         display: inline-block;
         vertical-align: top;
         margin-left: 26px;
-        width: 44px;
-        height: 44px; }
+        width: 43px;
+        height: 43px; }
         .footer .footer__social__list .footer__social__item:first-child {
           margin-left: 0px; }
         .footer .footer__social__list .footer__social__item .footer__social__link_FB {
           position: relative;
           display: block;
-          background-image: url("../../img/footer-FB.png");
+          background-image: url("../img/footer-FB.png");
           text-indent: -9999px;
           height: 100%;
           width: 100%; }
           .footer .footer__social__list .footer__social__item .footer__social__link_FB:hover {
-            background-image: url("../../img/footer-FB-hover.png"); }
+            background-image: url("../img/footer-FB-hover.png"); }
         .footer .footer__social__list .footer__social__item .footer__social__link_VK {
           position: relative;
           display: block;
-          background-image: url("../../img/footer-VK.png");
+          background-image: url("../img/footer-VK.png");
           text-indent: -9999px;
           height: 100%;
           width: 100%; }
           .footer .footer__social__list .footer__social__item .footer__social__link_VK:hover {
-            background-image: url("../../img/footer-VK-hover.png"); }
+            background-image: url("../img/footer-VK-hover.png"); }
         .footer .footer__social__list .footer__social__item .footer__social__link_TW {
           position: relative;
           display: block;
-          background-image: url("../../img/footer-TW.png");
+          background-image: url("../img/footer-TW.png");
           text-indent: -9999px;
           height: 100%;
           width: 100%; }
           .footer .footer__social__list .footer__social__item .footer__social__link_TW:hover {
-            background-image: url("../../img/footer-TW-hover.png"); }
+            background-image: url("../img/footer-TW-hover.png"); }
+  .footer__social {
+    margin-bottom: 19px;
+    margin-right: 83px;
+    margin-top: 35px; }
+    .footer__social__list {
+      float: right; }
+  .footer__nav {
+    float: right;
+    margin-right: 83px; }
+    .footer__nav__container {
+      width: 576px; }
+    .footer__nav__list {
+      list-style-type: none;
+      font-size: 0;
+      text-align: right; }
+    .footer__nav__item {
+      display: inline-block;
+      margin-left: 30px;
+      margin-bottom: 23px; }
+    .footer__nav__link {
+      font-size: 14px;
+      font-family: 'open_sansregular';
+      color: #ffffff; }
+  .footer .copyright {
+    margin: 0;
+    clear: both;
+    font-family: 'open_sansregular';
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 11px;
+    line-height: 12px; }

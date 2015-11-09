@@ -9,19 +9,26 @@
     .nav-wrapper .navigate__item {
       display: inline-block;
       background-color: #ffffff; }
+      .nav-wrapper .navigate__item:before, .nav-wrapper .navigate__item:after {
+        position: absolute;
+        width: 2000px;
+        content: "";
+        height: 20px; }
       .nav-wrapper .navigate__item .navigate__link {
+        display: block;
+        height: 52px;
         text-decoration: none;
         padding-left: 16px;
         padding-right: 16px;
         line-height: 52px;
         color: #333333;
         font-size: 16px;
-        font-family: 'Opensans_semibold'; }
+        font-family: 'open_sanssemibold'; }
     .nav-wrapper .navigate__item:hover {
       background-color: #cccccc; }
       .nav-wrapper .navigate__item:hover .navigate__link {
         color: #333333;
-        font-family: 'Opensans_bold'; }
+        font-family: 'open_sansbold'; }
     .nav-wrapper .navigate__item_active {
       display: inline-block;
       background-color: #ff6600; }
@@ -31,5 +38,5 @@
         padding-left: 16px;
         padding-right: 16px;
         color: #ffffff;
-        font-family: 'Opensans_bold';
+        font-family: 'open_sansbold';
         font-size: 16px; }

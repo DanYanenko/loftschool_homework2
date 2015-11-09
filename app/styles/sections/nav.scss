@@ -9,23 +9,33 @@
 			font-size:0px;
 		}
 		&__item{
+			&:before,&:after{
+				position:absolute;
+				width:2000px;
+				content:"";
+				height:20px;
+
+			}
 			display:inline-block;
 			background-color:#ffffff;
+
 			.navigate__link{
+				display:block;
+				height:52px;
 				text-decoration:none;
 				padding-left:16px;
 				padding-right:16px;
 				line-height:52px;
 				color:#333333;
 				font-size:16px;
-				font-family:'Opensans_semibold';
+				font-family:'open_sanssemibold';
 			}
 		}
 		&__item:hover{
 			background-color:#cccccc;
 			.navigate__link{
 				color:#333333;
-				font-family:'Opensans_bold';
+				font-family:'open_sansbold';
 			}
 		}
 		&__item_active{
@@ -37,7 +47,7 @@
 				padding-left:16px;
 				padding-right:16px;
 				color:#ffffff;
-				font-family:'Opensans_bold';
+				font-family:'open_sansbold';
 				font-size:16px;
 			}
 		}
