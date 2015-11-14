@@ -25,17 +25,17 @@
 				text-decoration:none;
 				padding-left:16px;
 				padding-right:16px;
-				line-height:52px;
+				line-height:53px;
 				color:#333333;
-				font-size:16px;
-				font-family:'open_sanssemibold';
+				font-size:14px;
+				font-family:'open_sansregular';
 			}
 		}
 		&__item:hover{
 			background-color:#cccccc;
 			.navigate__link{
 				color:#333333;
-				font-family:'open_sansbold';
+				font-family:'open_sansregular';
 			}
 		}
 		&__item_active{
@@ -43,12 +43,12 @@
 			background-color:#ff6600;
 			.navigate__link{
 				text-decoration:none;
-				line-height:52px;
+				line-height:53px;
 				padding-left:16px;
 				padding-right:16px;
 				color:#ffffff;
-				font-family:'open_sansbold';
-				font-size:16px;
+				font-family:'open_sanssemibold';
+				font-size:14px;
 			}
 		}
 	}

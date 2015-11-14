@@ -13,54 +13,57 @@ aside.sidebar
 		form.settings__filter(method="post" action="#")
 			ul.accordion__list
 				li.accordion__item
-					h2.accordion__item_header Наличие в магазинах
+					h2.accordion__item_header
+						span.header-text Наличие в магазинах
 						.accordion__item_arrow Стрелка для аккордеона
 					ul.presence__list.accordion__inner__list
 						li.presence__item.accordion__inner__item
 							label.radiobutton-wrapper
 								input.radiobutton__item(type="radio" name="radiobutton__item" id="radiobutton__item_1")
 								span.fake-radiobutton
-								span.radiobutton__value Во всех магазинах
+								span.text-value Во всех магазинах
 						li.presence__item.accordion__inner__item
 							label.radiobutton-wrapper
 								input.radiobutton__item(type="radio" name="radiobutton__item" id="radiobutton__item_2")
 								span.fake-radiobutton
-								span.radiobutton__value В ближайшем ко мне магазине
+								span.text-value В ближайшем ко мне магазине
 				li.accordion__item
-					h2.accordion__item_header Бренды
+					h2.accordion__item_header
+						span.header-text Бренды
 						.accordion__item_arrow Стрелка для аккордеона
 					ul.brands__list.accordion__inner__list
 						li.brands__item.accordion__inner__item
 							label.checkbox-wrapper
 								input.checkbox__item(type="checkbox" id="checkbox__item_1")
 								span.fake-checkbox
-								span.checkbox__value Lenovo
+								span.text-value Lenovo
 						li.brands__item.accordion__inner__item
 							label.checkbox-wrapper
 								input.checkbox__item(type="checkbox" id="checkbox__item_2")
 								span.fake-checkbox
-								span.checkbox__value Apple
+								span.text-value Apple
 						li.brands__item.accordion__inner__item
 							label.checkbox-wrapper
 								input.checkbox__item(type="checkbox" id="checkbox__item_3")
 								span.fake-checkbox
-								span.checkbox__value Samsung
+								span.text-value Samsung
 						li.brands__item.accordion__inner__item
 							label.checkbox-wrapper
 								input.checkbox__item(type="checkbox" id="checkbox__item_4")
 								span.fake-checkbox
-								span.checkbox__value Asus
+								span.text-value Asus
 						li.brands__item.accordion__inner__item
 							label.checkbox-wrapper
 								input.checkbox__item(type="checkbox" id="checkbox__item_5")
 								span.fake-checkbox
-								span.checkbox__value Motorola
+								span.text-value Motorola
 						li.brands__reset.accordion__inner__item
 							label.label_reset
 								span.reset_text Сбросить фильтр
 								input.reset__button(type="reset" id="reset__button_brands" value="Сбросить фильтр")
 				li.accordion__item
-					h2.accordion__item_header Цена
+					h2.accordion__item_header
+						span.header-text Цена
 						.accordion__item_arrow Стрелка для аккордеона
 					.price__slider.accordion__inner__list
 						.accordion__inner__item
@@ -71,39 +74,41 @@ aside.sidebar
 								input.max-range__input(type="text" id="max-range" value="13000")
 							div(id="slider" data-min-value="100" data-max-value="13000")
 				li.accordion__item
-					h2.accordion__item_header Цвет
+					h2.accordion__item_header
+						span.header-text Цвет
 						.accordion__item_arrow Стрелка для аккордеона
 					-var colors = 12
 					+colorList(colors)
 				li.accordion__item
-					h2.accordion__item_header Операционные системы
+					h2.accordion__item_header
+						span.header-text Операционные системы
 						.accordion__item_arrow Стрелка для аккордеона
 					ul.os__list.accordion__inner__list
 						li.os__item.accordion__inner__item
 							label.checkbox-wrapper
 								input.checkbox__item(type="checkbox" id="checkbox__item_1")
 								span.fake-checkbox
-								span.checkbox__value Android
+								span.text-value Android
 						li.os__item.accordion__inner__item
 							label.checkbox-wrapper
 								input.checkbox__item(type="checkbox" id="checkbox__item_2")
 								span.fake-checkbox
-								span.checkbox__value iOS
+								span.text-value iOS
 						li.os__item.accordion__inner__item
 							label.checkbox-wrapper
 								input.checkbox__item(type="checkbox" id="checkbox__item_3")
 								span.fake-checkbox
-								span.checkbox__value Windows Mobile
+								span.text-value Windows Mobile
 						li.os__item.accordion__inner__item
 							label.checkbox-wrapper
 								input.checkbox__item(type="checkbox" id="checkbox__item_4")
 								span.fake-checkbox
-								span.checkbox__value Symbian
+								span.text-value Symbian
 						li.os__item.accordion__inner__item
 							label.checkbox-wrapper
 								input.checkbox__item(type="checkbox" id="checkbox__item_5")
 								span.fake-checkbox
-								span.checkbox__value Custom
+								span.text-value Custom
 						li.os__reset.accordion__inner__item
 							label.label_reset
 								span.reset_text Сбросить фильтр

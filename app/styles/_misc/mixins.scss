@@ -134,27 +134,34 @@
 	border-radius: 6px;
 	overflow:hidden;
 }
-@mixin view($type){
-	@each $view in $type{
-		li.view__item_#{$view}{
-			position:relative;
-			display:inline-block;
-			@if ($view: detailed-list){
-				    background: url("../img/view-#{$view}-active.png") no-repeat center;
-			}
-			background: url("../img/view-#{$view}-unactive.png") no-repeat center;
-			text-indent: -9999px;
-			height: 50px;
-			width: 50px;
-			/*&:hover{
-				background-image: url('../../img/#{$view}-hover.png');
-			}*/
+@mixin view($type){	
+	.view__item{
+		@each $view in $type{	
+			&__link_#{$view}{
+				display:block;
+				position: relative;
+				background: url("../img/view-#{$view}-unactive.png") no-repeat center;
+				text-indent: -9999px;
+				height: 50px;
+				width: 50px;
+				cursor:pointer;
+				&:hover{
+					background-image: url('../img/view-#{$view}-active.png');
+				}
+			}			
 		}
 	}	
+	.view__item.active{
+		@each $view in $type{
+			.view__item__link_#{$view}{
+				background-image: url('../img/view-#{$view}-active.png')!important;
+			}
+		}			
+	}					
 }
 
 @mixin slideShow(){
-	@content;
+	
 	.slideshow__main{
 		position:relative;
 		border-width: 1px;
@@ -163,8 +170,7 @@
 		border-radius: 2px;		
 		width: 134px;
 		height: 134px;
-		margin-left: 21px;
-		margin-bottom:15px;
+		
 
 		&__picture{
 			position: absolute;
@@ -181,9 +187,8 @@
 		
 	.slideshow__list{
 		list-style-type:none;
-		margin-bottom: 15px;
-		margin-left: 21px;
 	}
+
 	.slideshow__item{
 		border-width: 1px;
 		border-color: rgb(222, 225, 228);
@@ -200,7 +205,12 @@
 		&:hover{
 			border-color: rgb(255, 102, 0);
 		}
+		&__pic{
+			width:32px;
+			height:32px;
+		}
 	}
+	@content;
 }
 
 @mixin partNumber(){

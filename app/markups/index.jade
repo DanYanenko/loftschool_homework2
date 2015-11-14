@@ -10,15 +10,18 @@ block content
 			.price-filter
 				form.price-filter__form(method="post" id="price-form" action="#")
 					span.filter_span Сортировать по
-					select.select(type="select" name="select__item" id="select__item")
-						option.select__item(form="price__form") По цене
-						option.select__item(form="price__form") По популярности
+					select.sort-select(type="select" name="select__item" id="select__item")
+						option.select__item(form="price__form") по цене
+						option.select__item(form="price__form") по популярности
 			.view-options
 				span.view-options__text Вид каталога
 				ul.view__list
-					li.view__item_detailed-list Detailed list
-					li.view__item_thumbnails Thumbnails
-					li.view__item_simple-list List
+					li.view__item.active(data-mode="detailed-list")
+						a.view__item__link.view__item__link_detailed-list Detailed list
+					li.view__item(data-mode="thumbnails")
+						a.view__item__link.view__item__link_thumbnails Thumbnails
+					li.view__item(data-mode="simple-list")
+						a.view__item__link.view__item__link_simple-list List
 							-
 								var products = {
 									model1:{
@@ -26,8 +29,25 @@ block content
 
 										'modelName':'Samsung GT-I9301I GALAXY S 3',
 
-										'description': 'Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, DGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...',
+										'description': 'Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, Связь 3G, Bluetooth 4.0, DGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...',
+
 										'price':'11 290',
+										
+										'parameters':{
+											'Тип сим-карты':'Micro-SIM',
+
+											'Количество сим-карт':'1',
+
+											'Цвет':'Белый',
+
+											'ОС':'Android',
+
+											'Связь 3G':'Есть',
+
+											'4G(LTE)':'Нет',
+
+											'GPS-модуль':'Есть'
+										},
 
 										'imgPath':{
 											'img1': 'img/1_1.jpg',
@@ -43,6 +63,23 @@ block content
 										'description': 'Вместе с новой Microsoft Lumia 640 Dual SIM (RM-1077) вы открываете мир ярких цифровых возможностей. Этот многофункциональный смартфон уже содержит набор бесплатных сервисов Microsoft...',
 
 										'price':'10 990',
+										
+										'parameters':{
+
+											'Тип сим-карты':'Micro-SIM',
+
+											'Количество сим-карт':'2',
+
+											'Цвет':'Белый',
+
+											'ОС':'Windows Phone',
+
+											'Связь 3G':'Есть',
+
+											'4G(LTE)':'Нет',
+
+											'GPS-модуль':'A-GPS'
+										},										
 
 										'imgPath':{
 											'img1': 'img/2_1.jpg',
@@ -55,9 +92,27 @@ block content
 
 										'modelName':'Archos 50 Oxygen Plus',
 
-										'description': 'Смартфон Archos 50 Oxygen Plus, серый. Моноблок, Micro-SIM, Android , 3G, Bluetooth, USB-подключение к ПК, Wi-Fi, Разрешение основной камеры 8 Мп...',
+										'description': 'Смартфон Archos 50 Oxygen Plus, серый. Моноблок, Micro-SIM, Android , Связь 3G, Bluetooth, USB-подключение к ПК, Wi-Fi, Разрешение основной камеры 8 Мп...',
 
 										'price':'9 990',
+
+										'parameters':{
+											
+
+											'Тип сим-карты':'Micro-SIM',
+
+											'Количество сим-карт':'2',
+
+											'Цвет':'Серый',
+
+											'ОС':'Android',
+
+											'Связь 3G':'Есть',
+
+											'4G(LTE)':'Нет',
+
+											'GPS-модуль':'Есть'
+										},
 
 										'imgPath':{
 											'img1': 'img/3_1.jpg',
@@ -74,7 +129,24 @@ block content
 
 										'description': 'Смартфон Philips S398 Black. Черный корпус и разнообразие цветных панелей для Philips S398 как нельзя лучше подчеркнут ваш статус и уверенность в себе. Преимущества этой модели...',
 
-										'price':'8 990',
+										
+											'price':'8 990',
+
+											'parameters':{
+												'Тип сим-карты':'Micro-SIM',
+
+												'Количество сим-карт':'2',
+
+												'Цвет':'Черный',
+
+												'ОС':'Android',
+
+												'Связь 3G':'Есть',
+
+												'4G(LTE)':'Нет',
+
+												'GPS-модуль':'Есть'
+											},
 
 										'imgPath':{
 											'img1': 'img/4_1.jpg',
@@ -92,6 +164,23 @@ block content
 
 										'price':'5 390',
 
+										
+										'parameters':{
+											'Тип сим-карты':'Micro-SIM',
+
+											'Количество сим-карт':'2',
+
+											'Цвет':'Белый',
+
+											'ОС':'Android',
+
+											'Связь 3G':'Есть',
+
+											'4G(LTE)':'Нет',
+
+											'GPS-модуль':'A-GPS'
+										},
+
 										'imgPath':{
 											'img1': 'img/5_1.jpg',
 											'img2': 'img/5_2.jpg',
@@ -105,9 +194,25 @@ block content
 
 										'modelName':'Senseit L301 black',
 
-										'description': 'Смартфон Senseit L301 black, черный. Micro-SIM, две поддерживаемых SIM-карты, Android, 3G, GPS-модуль...',
+										'description': 'Смартфон Senseit L301 black, черный. Micro-SIM, две поддерживаемых SIM-карты, Android, Связь 3G, GPS-Связь...',
 
 										'price':'4 990',
+
+										'parameters':{
+											'Тип сим-карты':'Micro-SIM',
+
+											'Количество сим-карт':'2',
+
+											'Цвет':'Черный',
+
+											'ОС':'Android',
+
+											'Связь 3G':'Есть',
+
+											'4G(LTE)':'Нет',
+
+											'GPS-модуль':'Есть'
+										},
 
 										'imgPath':{
 											'img1': 'img/6_1.jpg',
@@ -122,9 +227,25 @@ block content
 
 										'modelName':'HIGHSCREEN WinWin Black',
 
-										'description': 'Смартфон HIGHSCREEN WinWin Black оснащен 4" дисплеем и двумя слотами для SIM-карт.  Windows Phone , 3G, Bluetooth, USB-подключение к ПК...',
+										'description': 'Смартфон HIGHSCREEN WinWin Black оснащен 4" дисплеем и двумя слотами для SIM-карт.  Windows Phone , Связь 3G, Bluetooth, USB-подключение к ПК...',
 
 										'price':'3 990',
+
+										'parameters':{
+											'Тип сим-карты':'Micro-SIM',
+
+											'Количество сим-карт':'2',
+
+											'Цвет':'Черный',
+
+											'ОС':'Windows Phone',
+
+											'Связь 3G':'Есть',
+
+											'4G(LTE)':'Нет',
+
+											'GPS-модуль':'Есть'
+										},
 
 										'imgPath':{
 											'img1': 'img/7_1.jpg',
@@ -143,6 +264,22 @@ block content
 
 										'price':'3 290',
 
+										'parameters':{
+											'Тип сим-карты':'Micro-SIM',
+
+											'Количество сим-карт':'2',
+
+											'Цвет':'Белый',
+
+											'ОС':'Android',
+
+											'Связь 3G':'Есть',
+
+											'4G(LTE)':'Нет',
+
+											'GPS-модуль':'A-GPS'
+										},
+										
 										'imgPath':{
 											'img1': 'img/8_1.jpg',
 											'img2': 'img/8_2.jpg',
@@ -160,6 +297,22 @@ block content
 
 										'price':'1 790',
 
+										'parameters':{
+												'Тип сим-карты':'Micro-SIM',
+
+												'Количество сим-карт':'2',
+
+												'Цвет':'Черный',
+
+												'ОС':'Android',
+
+												'Связь 3G':'Нет',
+
+												'4G(LTE)':'Нет',
+
+												'GPS-модуль':'Нет'
+										},									
+
 										'imgPath':{
 											'img1': 'img/9_1.jpg',
 											'img2': 'img/9_2.jpg',
@@ -168,15 +321,35 @@ block content
 									}
 								};
 		.models-container
-			ul.view-types-list
-				li.view-types-item
+			ul.view-types__list
+				li.view-types__item.view-types__item_detailed-list.active
 					.detailed-list
 						+content-detailed-list(products)
-				li.view-types-item
-				li.view-types-item
+				li.view-types__item.view-types__item_thumbnails
+					.thumbnails
+						+content-thumbnails(products)
+				li.view-types__item.view-types__item_simple-list
 					.simple-list
 						+content-simple-list(products)
-			+nav('page-numbers', {'<':'#', '1':'#', '2':'#', '3':'#', '4':'#', '5':'#', '>':'#'}, 1)
-		
+			.pagination
+				ul.pagination__list
+					li.pagination__item.pagination__item_prev
+						a(href="#").pagination__link= '<'
+					- for (var i = 1; i<4; i++)
+						li.pali.pagination__item
+							a(href="#").pagination__link= i
+
+					li.pagination__item.pagination__item_next
+						a(href="#").pagination__link='>'
+	.attention
+		h2.main-title Важная информация
+		.attention__text
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quam dicta, modi dolorum dolore ducimus sequi animi adipisci, enim quos nihil doloribus fuga odio est, nam quia dolor. Dolorem, commodi.
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quam dicta, modi dolorum dolore ducimus sequi animi adipisci, enim quos nihil doloribus fuga odio est, nam quia dolor. Dolorem, commodi.
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quam dicta, modi dolorum dolore ducimus sequi animi adipisci, enim quos nihil doloribus fuga odio est, nam quia dolor. Dolorem, commodi.
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quam dicta, modi dolorum dolore ducimus sequi animi adipisci, enim quos nihil doloribus fuga odio est, nam quia dolor. Dolorem, commodi.
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quam dicta, modi dolorum dolore ducimus sequi animi adipisci, enim quos nihil doloribus fuga odio est, nam quia dolor. Dolorem, commodi.
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quam dicta, modi dolorum dolore ducimus sequi animi adipisci, enim quos nihil doloribus fuga odio est, nam quia dolor. Dolorem, commodi.
+
 
 

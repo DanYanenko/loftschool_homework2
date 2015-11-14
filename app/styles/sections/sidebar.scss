@@ -42,6 +42,7 @@
 	}
 
 	.current-section__name{
+		width:331px;
 		margin:0;
 		padding:0;
 		font-family:'open_sansbold';
@@ -63,35 +64,43 @@
 		width:331px;
 		box-sizing:border-box;
 		@include borders();
+
+
 		.accordion__item_header{
 			position:relative;
-			font-family:'open_sanssemibold';
-			font-size:16px;
-			color:#333333;
 			margin-top:0;
-			margin-bottom:21px;
+			margin-bottom: 0;
+			padding-top: 16px;
+    		padding-bottom: 21px;
 			display:block;
 			vertical-align:top;
 			
 			cursor:pointer;
-			
-		}
-		
-		
-		.accordion__item_arrow{
-			float: right;
-			margin-right: 10px;
-			@include arrow();
-			background:url('../img/arrow.png') no-repeat 0 4px;
+			.header-text{
+				display: inline-block;
+				font-family:'open_sanssemibold';
+				font-size:16px;
+				color:#333333;
+				position: relative;
+			    vertical-align: middle;
+			    width: 271px;
+			    word-break: break-all;
 			}
+			.accordion__item_arrow{
+				float: right;
+				margin-right: 10px;
+				@include arrow();
+				background:url('../img/arrow.png') no-repeat 0 7px;
+			}
+		}
+				
+		
 
 		.arrow_down{  // Разворот стрелки при раскрытии аккордеона
 			background:url('../img/arrow_down.png') no-repeat 0 4px;
 		}	
 		.accordion__item{
-			&:first-child{
-				margin-top:16px;
-			}	
+			display: block;
 			font-size:0;
 			padding-left:30px;
 			border-bottom:solid;
@@ -100,21 +109,7 @@
 				border-bottom:none;
 			}
 			border-color:#cccccc;
-			*[class*="list"]{ list-style-type:none;}
-		}
-		*[class*="value"]{
-			font-family:'open_sansregular';
-			font-size:14px;
-			color:#333333;
-		}
-		*[class$="__item"], *[class$="_reset"]{
-			margin-bottom:16px;
-			display: block;
-		}
-		
-		.accordion__item{
-			margin-bottom:16px;
-			display: block;
+						
 		}
 
 		.radiobutton__value, .checkbox__value{
@@ -198,6 +193,26 @@
 
 .accordion__inner__list{
 	display:none;
+	margin-bottom:19px;
+	list-style-type:none;
+
+	.accordion__inner__item{
+		margin-bottom: 16px;
+    	display: block;
+		
+		.text-value{
+			font-family:'open_sansregular';
+			font-size:14px;
+			color:#333333;
+			vertical-align: middle;
+			margin-left:9px;
+		}
+
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
 }
 
 

@@ -1,5 +1,4 @@
-$(document).ready(function() {
-    console.log('in slider.js');
+$(document).ready(function(){
 
     var minValue = $('#slider').data('minValue'),
         maxValue = $('#slider').data('maxValue'),

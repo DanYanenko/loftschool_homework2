@@ -22,7 +22,9 @@ mixin colorList(colors)
 			li(class="accordion__inner__item color__item_"+item)
 mixin content-detailed-list(products)
 	ul.detailed-list__list
+		-var counter=0;			
 		-for(var ind in products)
+			-counter++;
 			li(class='detailed-list__item')
 				.slideshow-block
 					.slideshow__main
@@ -30,31 +32,33 @@ mixin content-detailed-list(products)
 					ul.slideshow__list.clearfix
 						li.slideshow__item.clearfix.active
 							a.slideshow__item__link(href="#")
-								img.slide-show__item__pic(src=products[ind].imgPath.img1 alt="slideshow_pic1")
+								img.slideshow__item__pic(src=products[ind].imgPath.img1 alt="slideshow_pic1")
 						li.slideshow__item.clearfix
 							a.slideshow__item__link(href="#")
-								img.slide-show__item__pic(src=products[ind].imgPath.img2 alt="slideshow_pic2")
+								img.slideshow__item__pic(src=products[ind].imgPath.img2 alt="slideshow_pic2")
 						li.slideshow__item.clearfix
 							a.slideshow__item__link(href="#")
-								img.slide-show__item__pic(src=products[ind].imgPath.img3 alt="slideshow_pic3")
-					.part-number-container
+								img.slideshow__item__pic(src=products[ind].imgPath.img3 alt="slideshow_pic3")
+					.part-number-container.clearfix
 						span(class='part-number')='Артикул'
 						span(class='part-number-value')= products[ind].partNumber
 				.model-main-info
 					h2.model-name= products[ind].modelName
 					.desc-block= products[ind].description
-					.rating-widget widget
+					.rating
 				.to-basket
 					.price= products[ind].price
 						span.rouble-sign г
-					form.to-basket__form(method="post" action="#" id="to-basket__form" name="to-basket__form")
-						input.to-basket-button(type="button" name="to-basket-button" id="to-basket-button" value="В корзину")
+					form.to-basket__form(method="post" action="#" id="to-basket__form_"+counter name="to-basket__form_"+counter)
+						input.to-basket-button(type="button" name="to-basket-button_"+counter id="to-basket-button_"+counter value="В корзину")
 					.availability-state
 						.availability-state__available
 							span.availability-state__text В наличии
 mixin content-simple-list(products)
 	ul.simple-list__list
+		-var counter=0;			
 		-for (var ind in products)
+			-counter++;
 			li.simple-list__item.clearfix
 				.part-number-container
 					span(class='part-number')='Артикул'
@@ -65,6 +69,43 @@ mixin content-simple-list(products)
 				.availability-state
 					.availability-state__available
 						span.availability-state__text В наличии
-				form.to-basket__form(method="post" action="#" id="to-basket__form" name="to-basket__form")
-						input.to-basket-button(type="button" name="to-basket-button" id="to-basket-button" value="В корзину")
+				form.to-basket__form(method="post" action="#" id="to-basket__form_"+counter name="to-basket__form_"+counter)
+						input.to-basket-button(type="button" name="to-basket-button_"+counter id="to-basket-button_"+counter value="В корзину")
+mixin content-thumbnails(products)
+	ul.thumbnails__list.clearfix
+		-var counter=0;
+		-for (var ind in products)
+			-counter++;
+			li.thumbnails__item
+				.thumbnails__item__wrapper
+					.slideshow-block
+						.slideshow__main
+							img.slideshow__main__picture(src=products[ind].imgPath.img1 alt="slideshow_pic1")
+						ul.slideshow__list.clearfix
+							li.slideshow__item.clearfix.active
+								a.slideshow__item__link(href="#")
+									img.slideshow__item__pic(src=products[ind].imgPath.img1 alt="slideshow_pic1")
+							li.slideshow__item.clearfix
+								a.slideshow__item__link(href="#")
+									img.slideshow__item__pic(src=products[ind].imgPath.img2 alt="slideshow_pic2")
+							li.slideshow__item.clearfix
+								a.slideshow__item__link(href="#")
+									img.slideshow__item__pic(src=products[ind].imgPath.img3 alt="slideshow_pic3")
+					h2.model-name= products[ind].modelName
+					ul.params__list.clearfix
+						-for (var param in products[ind].parameters)
+							li.params__item.clearfix
+								div(class="param-name")= param
+								div(class="param-value")= products[ind].parameters[param]
+					div(class="rating" data-rating="5")
+					.price= products[ind].price
+						span.rouble-sign г
+					.availability-state
+						.availability-state__available
+							span.availability-state__text В наличии
+					form.to-basket__form(method="post" action="#" id="to-basket__form_"+counter name="to-basket__form_"+counter)
+						input.to-basket-button(type="button" name="to-basket-button_" id="to-basket-button_"+ counter value="В корзину")
+
+
+
 

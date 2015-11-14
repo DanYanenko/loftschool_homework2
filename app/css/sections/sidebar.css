@@ -25,6 +25,7 @@
       font-family: 'open_sansregular';
       font-size: 14px; }
   .nav-history .current-section__name {
+    width: 331px;
     margin: 0;
     padding: 0;
     font-family: 'open_sansbold';
@@ -72,47 +73,42 @@
   overflow: hidden; }
   .selection_settings .accordion__item_header {
     position: relative;
-    font-family: 'open_sanssemibold';
-    font-size: 16px;
-    color: #333333;
     margin-top: 0;
-    margin-bottom: 21px;
+    margin-bottom: 0;
+    padding-top: 16px;
+    padding-bottom: 21px;
     display: block;
     vertical-align: top;
     cursor: pointer; }
-  .selection_settings .accordion__item_arrow {
-    float: right;
-    margin-right: 10px;
-    text-indent: -9999px;
-    position: relative;
-    display: inline-block;
-    width: 18px;
-    height: 17px;
-    background: url("../img/arrow.png") no-repeat 0 4px; }
+    .selection_settings .accordion__item_header .header-text {
+      display: inline-block;
+      font-family: 'open_sanssemibold';
+      font-size: 16px;
+      color: #333333;
+      position: relative;
+      vertical-align: middle;
+      width: 271px;
+      word-break: break-all; }
+    .selection_settings .accordion__item_header .accordion__item_arrow {
+      float: right;
+      margin-right: 10px;
+      text-indent: -9999px;
+      position: relative;
+      display: inline-block;
+      width: 18px;
+      height: 17px;
+      background: url("../img/arrow.png") no-repeat 0 7px; }
   .selection_settings .arrow_down {
     background: url("../img/arrow_down.png") no-repeat 0 4px; }
   .selection_settings .accordion__item {
+    display: block;
     font-size: 0;
     padding-left: 30px;
     border-bottom: solid;
     border-bottom-width: 1px;
     border-color: #cccccc; }
-    .selection_settings .accordion__item:first-child {
-      margin-top: 16px; }
     .selection_settings .accordion__item:last-child {
       border-bottom: none; }
-    .selection_settings .accordion__item *[class*="list"] {
-      list-style-type: none; }
-  .selection_settings *[class*="value"] {
-    font-family: 'open_sansregular';
-    font-size: 14px;
-    color: #333333; }
-  .selection_settings *[class$="__item"], .selection_settings *[class$="_reset"] {
-    margin-bottom: 16px;
-    display: block; }
-  .selection_settings .accordion__item {
-    margin-bottom: 16px;
-    display: block; }
   .selection_settings .radiobutton__value, .selection_settings .checkbox__value {
     margin-left: 10px;
     display: inline-block;
@@ -434,4 +430,17 @@
       margin-left: 8px; }
 
 .accordion__inner__list {
-  display: none; }
+  display: none;
+  margin-bottom: 19px;
+  list-style-type: none; }
+  .accordion__inner__list .accordion__inner__item {
+    margin-bottom: 16px;
+    display: block; }
+    .accordion__inner__list .accordion__inner__item .text-value {
+      font-family: 'open_sansregular';
+      font-size: 14px;
+      color: #333333;
+      vertical-align: middle;
+      margin-left: 9px; }
+    .accordion__inner__list .accordion__inner__item:last-child {
+      margin-bottom: 0; }
