@@ -1,0 +1,34 @@
+.ico {
+  background-image: url(spritesheet.png);
+  background-repeat: no-repeat;
+  display: block; }
+
+.ico-header-FB {
+  width: 26px;
+  height: 26px;
+  background-position: -70px -70px; }
+
+.ico-header-FB-hover {
+  width: 26px;
+  height: 26px;
+  background-position: -236px -70px; }
+
+.ico-header-TW {
+  width: 26px;
+  height: 26px;
+  background-position: -70px -236px; }
+
+.ico-header-TW-hover {
+  width: 26px;
+  height: 26px;
+  background-position: -236px -236px; }
+
+.ico-header-VK {
+  width: 27px;
+  height: 26px;
+  background-position: -402px -70px; }
+
+.ico-header-VK-hover {
+  width: 27px;
+  height: 26px;
+  background-position: -402px -236px; }

@@ -4,10 +4,14 @@
   width: 100%;
   min-width: 1300px;
   background: url("../img/pattern.png"); }
-  .footer__logo {
+  .footer__logo__link {
+    display: inline-block;
     margin-left: 79px;
     margin-top: 72px;
     float: left; }
+    .footer__logo__link .logo__text {
+      position: absolute;
+      left: -9999px; }
   .footer .footer__right-column {
     float: right;
     margin-bottom: 17px; }
@@ -30,30 +34,15 @@
         .footer .footer__social__list .footer__social__item .footer__social__link_FB {
           position: relative;
           display: block;
-          background-image: url("../img/footer-FB.png");
-          text-indent: -9999px;
-          height: 100%;
-          width: 100%; }
-          .footer .footer__social__list .footer__social__item .footer__social__link_FB:hover {
-            background-image: url("../img/footer-FB-hover.png"); }
+          text-indent: -9999px; }
         .footer .footer__social__list .footer__social__item .footer__social__link_VK {
           position: relative;
           display: block;
-          background-image: url("../img/footer-VK.png");
-          text-indent: -9999px;
-          height: 100%;
-          width: 100%; }
-          .footer .footer__social__list .footer__social__item .footer__social__link_VK:hover {
-            background-image: url("../img/footer-VK-hover.png"); }
+          text-indent: -9999px; }
         .footer .footer__social__list .footer__social__item .footer__social__link_TW {
           position: relative;
           display: block;
-          background-image: url("../img/footer-TW.png");
-          text-indent: -9999px;
-          height: 100%;
-          width: 100%; }
-          .footer .footer__social__list .footer__social__item .footer__social__link_TW:hover {
-            background-image: url("../img/footer-TW-hover.png"); }
+          text-indent: -9999px; }
   .footer__social {
     margin-bottom: 19px;
     margin-right: 83px;
@@ -77,6 +66,8 @@
       font-size: 14px;
       font-family: 'open_sansregular';
       color: #ffffff; }
+      .footer__nav__link:hover {
+        text-decoration: none; }
   .footer .copyright {
     margin: 0;
     clear: both;

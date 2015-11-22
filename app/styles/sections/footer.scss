@@ -6,10 +6,15 @@
 	width:100%;
 	min-width:1300px;
 	background: url('../img/pattern.png');
-	&__logo{
+	&__logo__link{
+		display:inline-block;
 		margin-left:79px;
 		margin-top:72px;
 		float:left;
+		.logo__text{
+			position: absolute;
+			left:-9999px;
+		}
 	}
 	$socials:FB VK TW;
 
@@ -47,6 +52,9 @@
 			font-size:14px;
 			font-family:'open_sansregular';
 			color:#ffffff;
+			&:hover{
+				text-decoration: none;
+			}
 		}	
 	}
 	.copyright{

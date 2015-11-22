@@ -1,0 +1,19 @@
+@import 'accordion_arrows_sprites.scss';
+@import 'checkbox_sprites.scss';
+@import 'footer__social_icons_sprites.scss';
+@import 'header__social_icons_sprites.scss';
+@import 'misc_sprites.scss';
+@import 'radiobutton_sprites.scss';
+@import 'rating_stars_sprites.scss';
+@import 'select_arrows_sprites.scss';
+@import 'view_icons_sprites.scss';
+
+
+$names: accordion_arrows_sprites checkbox_sprites footer__social_icons_sprites header__social_icons_sprites misc_sprites radiobutton_sprites rating_stars_sprites select_arrows_sprites view_icons_sprites;
+@each $name in $names{
+	.ico-#{$name} {
+	    background-image: url(../img/#{$name}/#{$name}.png);
+	    background-repeat: no-repeat;
+	    display: block;
+	}
+}	

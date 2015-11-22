@@ -20,13 +20,12 @@
 							.#{$mainTag}__social__link_#{$social}{
 								position:relative;
 								display:block;
-								background-image: url('../img/#{$mainTag}-#{$social}.png');
+
+								//background-image: url('../img/#{$mainTag}_social_icons/#{$mainTag}_social_icons.png');
 								text-indent: -9999px;
-								height: 100%;
-								width: 100%;
-								&:hover{
-									background-image: url('../img/#{$mainTag}-#{$social}-hover.png');
-								}
+								// height: 100%;
+								// width: 100%;
+								
 							}
 						}	
 					}
@@ -70,26 +69,46 @@
 @mixin colors($colors-list){
 	@each $current-color in $colors-list {
 		$i:index($colors-list,$current-color);
-		.color__item_#{$i}{
+		.color__item{
+			box-sizing:border-box;
+			width:39px;
+			height:39px;
 			display:inline-block;
-			border-width: 1px;
-			border-color: rgb(222, 225, 228);
-		 	border-style: solid;
-		 	box-sizing:border-box;
-		 	margin-bottom:22px;
-			background-color: $current-color;
-			width: 35px;
-			height: 35px;
-			z-index: 164;
-			cursor:pointer;
+			margin-bottom:20px;
+			margin-left:20px;
+			
+
+			border: transparent solid 2px;
+
 			&:nth-child(4n+1){
 				margin-left:0;
 			}
-			margin-left:22px;
-			&:hover{
+			&:nth-child(n+9){
+				margin-bottom:0;
+			}
+			
+			&.active{
 				border-color: rgb(255, 102, 0);
 			}
-		}
+			
+			.color__item__inner_#{$i}{
+				display: block;
+				border-width: 1px;
+				border-color: rgb(222, 225, 228);
+			 	border-style: solid;
+			 	box-sizing:border-box;
+			 	
+				background-color: $current-color;
+				width: 35px;
+				height: 35px;
+				z-index: 164;
+				cursor:pointer;
+				
+				&:hover{
+					border-color: rgb(255, 102, 0);
+				}
+			}
+		}		
 	}
 }
 
@@ -205,6 +224,9 @@
 		&:hover{
 			border-color: rgb(255, 102, 0);
 		}
+		&.active{
+			border-color: rgb(255, 102, 0);
+		}
 		&__pic{
 			width:32px;
 			height:32px;
@@ -247,7 +269,7 @@
 	font-family: 'open_sanssemibold';
 	color: rgb(51, 51, 51);
 	line-height: 20px;
-	height: 20px;
+	word-break: break-all;
 	@content;
 }
 
@@ -296,3 +318,59 @@
 	}
 	@content;
 }
+
+@mixin rating(){
+	@content;
+
+	width:118px;
+	font-size: 0;
+	.rating__list{
+		font-size:0;
+		list-style-type: none;
+		display: inline-block;
+		vertical-align: middle;
+		
+		.rating__item{
+			background: url('../img/star-empty.png') no-repeat;
+			display: inline-block;
+			width:16px;
+			height:15px;
+			&.rating__item_filled{
+				background: url('../img/star.png') no-repeat;
+			}
+		}
+		
+	}
+
+	.rating-amount{
+		color:#fbfbfb;
+		font-size: 12px;
+		font-family: 'open_sanssemibold';
+		line-height:15px;
+		width:30px;
+		background-color: #b5beca;
+		border-radius:20px;
+		margin-left:8px;
+		text-align:center;
+		display: inline-block;
+		vertical-align: middle;
+	}	
+}
+
+
+
+@mixin get-sprite ($map, $icon) {
+	$sprite-image: sprite-file($map, $icon);
+	$sprite-map: sprite-url($map);
+	$sprite-position: sprite-position($map, $icon);
+
+	background: $sprite-map $sprite-position no-repeat;
+
+	$sprite-height: image-height($sprite-image);
+	$sprite-width: image-width($sprite-image);
+
+	height: $sprite-height;
+	width: $sprite-width;
+}
+
+

@@ -77,13 +77,12 @@
 			
 			cursor:pointer;
 			.header-text{
-				display: inline-block;
 				font-family:'open_sanssemibold';
 				font-size:16px;
 				color:#333333;
 				position: relative;
 			    vertical-align: middle;
-			    width: 271px;
+			    width: 270px;
 			    word-break: break-all;
 			}
 			.accordion__item_arrow{
@@ -92,13 +91,14 @@
 				@include arrow();
 				background:url('../img/arrow.png') no-repeat 0 7px;
 			}
+			.arrow_down{  // Разворот стрелки при раскрытии аккордеона
+				background:url('../img/arrow_down.png') no-repeat 0 4px;
+			}	
 		}
 				
 		
 
-		.arrow_down{  // Разворот стрелки при раскрытии аккордеона
-			background:url('../img/arrow_down.png') no-repeat 0 4px;
-		}	
+		
 		.accordion__item{
 			display: block;
 			font-size:0;
@@ -131,7 +131,7 @@
 		}
 		.colors__list{
 			font-size:0;
-			width:206px;
+			width:220px;
 			$bg:#ffffff #cccccc #000000 #0a3153 #ff1800 #fff343 #fb914a #92c37c #40a6ff #9870ad #dc78ad #7f401d;
 			@include colors($bg);
 		}	
@@ -206,12 +206,7 @@
 			color:#333333;
 			vertical-align: middle;
 			margin-left:9px;
-		}
-
-
-		&:last-child{
-			margin-bottom: 0;
-		}
+		}		
 	}
 }
 

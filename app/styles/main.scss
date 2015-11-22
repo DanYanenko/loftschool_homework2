@@ -1,8 +1,13 @@
+
 @import 'sections/content.scss';
 @import 'sections/footer.scss';
 @import 'sections/header.scss';
 @import 'sections/nav.scss';
 @import 'sections/sidebar.scss';
+@import '_misc/sprites.scss';
+
+
+
 .container{
 	position:relative;
 	height:100%;

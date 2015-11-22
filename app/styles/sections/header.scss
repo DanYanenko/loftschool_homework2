@@ -1,4 +1,5 @@
 @import "../_misc/mixins";
+
 .clearfix:before{
 	content:"";
 	display:table;
@@ -11,16 +12,22 @@
 .header{
 	box-sizing: border-box;
 	position:relative;
-	height:173px;
+	min-width:1300px;
 	&1-container{
 		.header1-content {
 			margin:0 auto;
 			box-sizing:border-box;
 			width:1099px;
-			padding-top:25px;
-			height:77px;
+			margin-top:25px;
+			margin-bottom:26px;
+			
 			$socials:FB VK TW;
+			
+
 			@include social(header,16px,26px, $socials);
+			
+			
+
 			.header__social{ float:left;}
 			.address{
 				position:relative;
@@ -32,22 +39,30 @@
 					list-style-type:none;
 					margin:0;
 					padding:0;
+					font-size: 0;
 					.address__string{
 						display:inline-block;
+						vertical-align: middle;
 						position:relative;
 						padding-left:20px;
 						text-decoration:none;
 						font-family:'open_sansregular';
 						font-size:14px;
-						background:url('../img/map-pin.png') no-repeat 0 center;
+						//background:url('../img/map-pin.png') no-repeat 0 center;
+						width: 180px;
+    					word-wrap: break-word;
 					}
+
 					.phone__string{
 						margin-left:86px;
 						display:inline-block;
+						vertical-align: middle;
 						position:relative;
 						padding-left:20px;
 						text-decoration:none;
-						background:url('../img/telephone.png') no-repeat 0 center;
+						//background:url('../img/telephone.png') no-repeat 0 center;
+						width: 176px;
+    					word-wrap: break-word;
 						.phone__string__link{
 							color:#333333;
 							font-size:18px;
@@ -65,12 +80,16 @@
 			width:1099px;
 			margin:0 auto;
 			box-sizing:border-box;
-			height:96px;
-			padding-top:32px;
+			margin-top: 32px;
+   		 	margin-bottom: 28px;
 
-			.logo{
+			.logo__link{
 				display: inline-block;
 				vertical-align: middle;
+				.logo__text{
+					position: absolute;
+					left:-9999px;
+				}
 			}
 			.search-block {
 				font-size: 0;
@@ -140,6 +159,7 @@
 					margin:0; 
 					padding:0;
 					list-style-type:none;
+					width: 380px;
 				}
 				&__item{
 					display:inline-block;

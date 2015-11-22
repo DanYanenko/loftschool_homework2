@@ -1,0 +1,14 @@
+.ico {
+  background-image: url(spritesheet.png);
+  background-repeat: no-repeat;
+  display: block; }
+
+.ico-arrow {
+  width: 18px;
+  height: 11px;
+  background-position: -70px -70px; }
+
+.ico-arrow_down {
+  width: 18px;
+  height: 11px;
+  background-position: -228px -70px; }

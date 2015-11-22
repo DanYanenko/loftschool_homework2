@@ -9,13 +9,13 @@
 			font-size:0px;
 		}
 		&__item{
-			&:before,&:after{
-				position:absolute;
-				width:2000px;
-				content:"";
-				height:20px;
+			// &:before,&:after{
+			// 	position:absolute;
+			// 	width:2000px;
+			// 	content:"";
+			// 	height:20px;
 
-			}
+			// }
 			display:inline-block;
 			background-color:#ffffff;
 

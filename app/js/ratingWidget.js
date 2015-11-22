@@ -1,8 +1,7 @@
-$(document).ready(function() {
-	var RatingWidget = (function(){
+var RatingWidget = (function(){
 
 		var _letTheStarShining = function(ratingAmount){
-			var starsArray[],
+			var starsArray = [],
 			 	starClassName;
 
 			for (var i = 0; i < 5;i++){
@@ -35,14 +34,10 @@ $(document).ready(function() {
 				ratingDisplay = $('<div>',{
 					class : '.rating-amount',
 					text : ratingAmount 
-				})
+				});
 
 			elementToAppend.append([ul, ratingDisplay]);
-
-
-
-
-		}
+		};
 
 		return {
 			init: function(){
@@ -56,5 +51,11 @@ $(document).ready(function() {
 				});
 			}
 		}
-	})
+	});
+
+$(document).ready(function() {
+	
+	console.log('Hi!');
+	RatingWidget.init();
+	
 });

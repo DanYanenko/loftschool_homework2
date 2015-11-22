@@ -1,27 +1,38 @@
 $(document).ready(function() {
 
+	$.cssHooks.backgroundColor = {
+    get: function(elem) {
+	    if (elem.currentStyle){
+            var bg = elem.currentStyle["backgroundColor"];
+	    }
+        else if (window.getComputedStyle){
+            var bg = document.defaultView.getComputedStyle(elem,
+                null).getPropertyValue("background-color");
+        }
+        if (bg.search("rgb") == -1){
+            return bg;
+        }
+        else {
+            bg = bg.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+            function hex(x) {
+                return ("0" + parseInt(x).toString(16)).slice(-2);
+            }
+            return "#" + hex(bg[1]) + hex(bg[2]) + hex(bg[3]);
+        }
+    }
+}
 	
-	var elements =$('.colors__list').find('li');
+	$('.color__item').on('click', function(event) {
+		event.preventDefault();
+		var $this = $(this),
+			colorElem = $this.find('div');
+			//colorList = $this.closest('.colors__list');
+			//colorItems = colorList.find('.color__item');
 
-
-	$.each(elements, function(index, val) {
-		var colorElement = $(val).find('.color__item__border');
-	
-		var valid = true;
-
-		$(colorElement).on('click', _changeCss);
-
-		var _changeCss= function(){
-			$(colorElement).css({
-			'border-width': '2.5px',
-			'visibility': 'visible'
-		});
-		if ($(val).length === 0){
-			valid = false;
-		}
-		return valid;
-
-		};
-		
+		if(!$this.hasClass('active')){
+			$this.siblings().removeClass('active');
+			$this.addClass('active');
+			console.log(colorElem.css('backgroundColor'));
+		}		
 	});	
 });	

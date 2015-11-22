@@ -3,7 +3,7 @@ mixin iterate(className, items)
 		ul(class= className + "__list")
 			-for(var item in items)
 				li(class=className + "__item ")
-					a(href=items[item] target="blank" class= className + "__link_" + item)= item
+					a(href=items[item] target="blank" class= className + "__link_" + item +" ico-" + className + "_icons" + " ico-" + className + "-" + item)= item
 mixin nav(className, items, activeIndex)
 	nav(class= className)
 		div(class=className + "__container")
@@ -19,7 +19,8 @@ mixin nav(className, items, activeIndex)
 mixin colorList(colors)
 	ul(class="colors__list accordion__inner__list")
 		-for(var item=1;item<=colors;item++)
-			li(class="accordion__inner__item color__item_"+item)
+			li.accordion__inner__item.color__item
+				div(class="color__item__inner_"+item)
 mixin content-detailed-list(products)
 	ul.detailed-list__list
 		-var counter=0;			
@@ -45,7 +46,14 @@ mixin content-detailed-list(products)
 				.model-main-info
 					h2.model-name= products[ind].modelName
 					.desc-block= products[ind].description
-					.rating
+					div.rating(data-rating="")
+						ul.rating__list
+							li.rating__item.rating__item_filled
+							li.rating__item.rating__item_filled
+							li.rating__item.rating__item_filled
+							li.rating__item.rating__item_filled
+							li.rating__item
+						.rating-amount 4
 				.to-basket
 					.price= products[ind].price
 						span.rouble-sign г
@@ -98,6 +106,13 @@ mixin content-thumbnails(products)
 								div(class="param-name")= param
 								div(class="param-value")= products[ind].parameters[param]
 					div(class="rating" data-rating="5")
+						ul.rating__list
+							li.rating__item.rating__item_filled
+							li.rating__item.rating__item_filled
+							li.rating__item.rating__item_filled
+							li.rating__item.rating__item_filled
+							li.rating__item
+						.rating-amount 4
 					.price= products[ind].price
 						span.rouble-sign г
 					.availability-state

@@ -9,11 +9,6 @@
     .nav-wrapper .navigate__item {
       display: inline-block;
       background-color: #ffffff; }
-      .nav-wrapper .navigate__item:before, .nav-wrapper .navigate__item:after {
-        position: absolute;
-        width: 2000px;
-        content: "";
-        height: 20px; }
       .nav-wrapper .navigate__item .navigate__link {
         display: block;
         height: 52px;

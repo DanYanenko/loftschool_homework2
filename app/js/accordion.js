@@ -11,7 +11,6 @@ $(document).ready(function() {
 			otherContent = list.find('.accordion__inner__list'),
 			duration = 300;
 
-			
 
 			if(!item.hasClass('active')){
 				items.removeClass('active');

@@ -1,0 +1,24 @@
+.ico {
+  background-image: url(spritesheet.png);
+  background-repeat: no-repeat;
+  display: block; }
+
+.ico-in-stock {
+  width: 7px;
+  height: 7px;
+  background-position: -70px -70px; }
+
+.ico-map-pin {
+  width: 12px;
+  height: 16px;
+  background-position: -217px -70px; }
+
+.ico-slider-handle {
+  width: 8px;
+  height: 14px;
+  background-position: -369px -70px; }
+
+.ico-telephone {
+  width: 12px;
+  height: 16px;
+  background-position: -369px -224px; }

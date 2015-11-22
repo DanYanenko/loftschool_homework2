@@ -1,6 +1,8 @@
 include _mixin.jade
 footer.footer.clearfix
-	img.footer__logo(src="./img/footer-logo.png" alt="footer-logo")
+	a.footer__logo__link(href="index.html")
+		span.logo__text COOLTECH
+		img.footer__logo(src="./img/logo/footer-logo.png" alt="footer-logo")
 	//- socials={'vk':'http://vk.com/daniilyanenko', 'fb':'http://www.facebook.com/daniil.yanenko', 'twitter':'http://twitter.com'};
 	.footer__right-column.clearfix
 		+iterate('footer__social', socials)

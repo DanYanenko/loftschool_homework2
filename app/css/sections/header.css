@@ -9,14 +9,14 @@
   -moz-box-sizing: border-box;
        box-sizing: border-box;
   position: relative;
-  height: 173px; }
+  min-width: 1300px; }
   .header1-container .header1-content {
     margin: 0 auto;
     -moz-box-sizing: border-box;
          box-sizing: border-box;
     width: 1099px;
-    padding-top: 25px;
-    height: 77px; }
+    margin-top: 25px;
+    margin-bottom: 26px; }
     .header1-container .header1-content .header__social {
       position: relative;
       height: 26px;
@@ -36,30 +36,15 @@
           .header1-container .header1-content .header__social__list .header__social__item .header__social__link_FB {
             position: relative;
             display: block;
-            background-image: url("../img/header-FB.png");
-            text-indent: -9999px;
-            height: 100%;
-            width: 100%; }
-            .header1-container .header1-content .header__social__list .header__social__item .header__social__link_FB:hover {
-              background-image: url("../img/header-FB-hover.png"); }
+            text-indent: -9999px; }
           .header1-container .header1-content .header__social__list .header__social__item .header__social__link_VK {
             position: relative;
             display: block;
-            background-image: url("../img/header-VK.png");
-            text-indent: -9999px;
-            height: 100%;
-            width: 100%; }
-            .header1-container .header1-content .header__social__list .header__social__item .header__social__link_VK:hover {
-              background-image: url("../img/header-VK-hover.png"); }
+            text-indent: -9999px; }
           .header1-container .header1-content .header__social__list .header__social__item .header__social__link_TW {
             position: relative;
             display: block;
-            background-image: url("../img/header-TW.png");
-            text-indent: -9999px;
-            height: 100%;
-            width: 100%; }
-            .header1-container .header1-content .header__social__list .header__social__item .header__social__link_TW:hover {
-              background-image: url("../img/header-TW-hover.png"); }
+            text-indent: -9999px; }
     .header1-container .header1-content .header__social {
       float: left; }
     .header1-container .header1-content .address {
@@ -71,22 +56,29 @@
       .header1-container .header1-content .address__list {
         list-style-type: none;
         margin: 0;
-        padding: 0; }
+        padding: 0;
+        font-size: 0; }
         .header1-container .header1-content .address__list .address__string {
           display: inline-block;
+          vertical-align: middle;
           position: relative;
           padding-left: 20px;
           text-decoration: none;
           font-family: 'open_sansregular';
           font-size: 14px;
-          background: url("../img/map-pin.png") no-repeat 0 center; }
+          background: url("../img/map-pin.png") no-repeat 0 center;
+          width: 180px;
+          word-wrap: break-word; }
         .header1-container .header1-content .address__list .phone__string {
           margin-left: 86px;
           display: inline-block;
+          vertical-align: middle;
           position: relative;
           padding-left: 20px;
           text-decoration: none;
-          background: url("../img/telephone.png") no-repeat 0 center; }
+          background: url("../img/telephone.png") no-repeat 0 center;
+          width: 176px;
+          word-wrap: break-word; }
           .header1-container .header1-content .address__list .phone__string .phone__string__link {
             color: #333333;
             font-size: 18px;
@@ -99,11 +91,14 @@
       margin: 0 auto;
       -moz-box-sizing: border-box;
            box-sizing: border-box;
-      height: 96px;
-      padding-top: 32px; }
-      .header2-container .header2-content .logo {
+      margin-top: 32px;
+      margin-bottom: 28px; }
+      .header2-container .header2-content .logo__link {
         display: inline-block;
         vertical-align: middle; }
+        .header2-container .header2-content .logo__link .logo__text {
+          position: absolute;
+          left: -9999px; }
       .header2-container .header2-content .search-block {
         font-size: 0;
         display: inline-block;
@@ -165,7 +160,8 @@
         .header2-container .header2-content .header2-links__list {
           margin: 0;
           padding: 0;
-          list-style-type: none; }
+          list-style-type: none;
+          width: 380px; }
         .header2-container .header2-content .header2-links__item {
           display: inline-block;
           margin-left: 28px; }

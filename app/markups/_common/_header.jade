@@ -3,20 +3,22 @@ include _mixin.jade
 <p class="browser-notification">Ваш браузер <span>сильно</span>устарел. Пожалуйста <a href="http://http://browsehappy.com/">обновите</a> его.</p>
 <![endif]-->
 header.header.clearfix
-	header.header1-container
+	header.header1-container.clearfix
 		.header1-content.clearfix
 			-socials={'FB':'http://www.facebook.com/daniil.yanenko', 'VK':'http://vk.com/daniilyanenko', 'TW':'http://twitter.com'};
 			+iterate('header__social', socials)
 			address.address
 				ul.address__list
-					li.address__string ул. Маяковская 6, офис 17
+					li.address__string.ico_misc_sprites.ico-map-pin ул. Маяковская 6, офис 17
 					li.phone__string 
-						a.phone__string__link(href="tel:+79211231213") +7 (921) 123-12-13
-	header.header2-container
+						a.phone__string__link.ico_misc_sprites.ico-telephone(href="tel:+79211231213") +7 (921) 123-12-13
+	header.header2-container.clearfix
 		.header2-content
-			img.logo(src="./img/logo.png" alt="logo")
+			a.logo__link(href="index.html")
+				span.logo__text COOLTECH
+				img.logo(src="./img/logo/logo.png" alt="logo")
 			.search-block
-				form.search-form(method="post" id="search-form" action="#")
+				form.search-form(method="get" id="search-form" action="#")
 					input.search-block__textinput(type='search' placeholder="Что будем искать")
 					input.search-block__buttoninput(type="submit" value="Найти")
 			.header2-links
