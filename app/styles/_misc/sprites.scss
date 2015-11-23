@@ -5,7 +5,7 @@
 @import 'view_icons_sprites.scss';
 
 
-$names: accordion_arrows_sprites footer__social_icons header__social_icons misc_sprites view_icons_sprites;
+$names: accordion_arrows_sprites footer__social_icons header__social_icons misc view_icons_sprites;
 @each $name in $names{
 	.ico-#{$name} {
 	    background-image: url(../img/#{$name}/#{$name}.png);

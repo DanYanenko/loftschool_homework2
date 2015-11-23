@@ -1,14 +1,14 @@
 .ico-arrow {
   background-image: url("../img/accordion_arrows/accordion_arrows.png");
   width: 18px;
-  height: 11px;
-  background-position: -70px -70px;
+  height: 22px;
+  background-position: -70px -64px;
   background-repeat: no-repeat; }
 
 .ico-arrow_down {
   width: 18px;
-  height: 11px;
-  background-position: -228px -70px;
+  height: 22px;
+  background-position: -228px -64px;
   background-repeat: no-repeat;
   background-image: url("../img/accordion_arrows/accordion_arrows.png"); }
 
@@ -73,9 +73,7 @@
   background-position: -402px -236px; }
 
 .ico-map-pin {
-  width: 12px;
-  height: 16px;
-  background-position: -217px -70px; }
+  background-position: -217px -67px; }
 
 .ico-slider-handle {
   width: 8px;
@@ -83,56 +81,54 @@
   background-position: -369px -70px; }
 
 .ico-telephone {
-  width: 12px;
-  height: 16px;
-  background-position: -369px -224px; }
+  background-position: -369px -219px; }
 
 .ico-view-detailed-list:hover, .view__list .view__item.active .view__item__link_detailed-list {
   background-image: url("../img/view_icons/view_icons.png");
   background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
-  background-position: -70px -70px;
+  width: 50px;
+  height: 50px;
+  background-position: -53px -53px;
   background-repeat: no-repeat; }
 
 .ico-view-detailed-list {
   background-image: url("../img/view_icons/view_icons.png");
   background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
-  background-position: -226px -70px;
+  width: 50px;
+  height: 50px;
+  background-position: -209px -53px;
   background-repeat: no-repeat; }
 
 .ico-view-simple-list:hover, .view__list .view__item.active .view__item__link_simple-list {
   background-image: url("../img/view_icons/view_icons.png");
   background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
-  background-position: -70px -226px;
+  width: 50px;
+  height: 50px;
+  background-position: -53px -209px;
   background-repeat: no-repeat; }
 
 .ico-view-simple-list {
   background-image: url("../img/view_icons/view_icons.png");
   background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
-  background-position: -226px -226px;
+  width: 50px;
+  height: 50px;
+  background-position: -209px -209px;
   background-repeat: no-repeat; }
 
 .ico-view-thumbnails:hover, .view__list .view__item.active .view__item__link_thumbnails {
   background-image: url("../img/view_icons/view_icons.png");
   background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
-  background-position: -382px -70px;
+  width: 50px;
+  height: 50px;
+  background-position: -365px -53px;
   background-repeat: no-repeat; }
 
 .ico-view-thumbnails {
   background-image: url("../img/view_icons/view_icons.png");
   background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
-  background-position: -382px -226px;
+  width: 50px;
+  height: 50px;
+  background-position: -365px -209px;
   background-repeat: no-repeat; }
 
 .ico-accordion_arrows_sprites {
@@ -150,8 +146,8 @@
   background-repeat: no-repeat;
   display: block; }
 
-.ico-misc_sprites {
-  background-image: url(../img/misc_sprites/misc_sprites.png);
+.ico-misc {
+  background-image: url(../img/misc/misc.png);
   background-repeat: no-repeat;
   display: block; }
 

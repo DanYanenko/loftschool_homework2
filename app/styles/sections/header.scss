@@ -51,6 +51,9 @@
 						//background:url('../img/map-pin.png') no-repeat 0 center;
 						width: 180px;
     					word-wrap: break-word;
+    					.address__text{
+    						background-color: #ffffff;
+    					}
 					}
 
 					.phone__string{

@@ -9,9 +9,11 @@ header.header.clearfix
 			+iterate('header__social', socials)
 			address.address
 				ul.address__list
-					li.address__string.ico_misc_sprites.ico-map-pin ул. Маяковская 6, офис 17
-					li.phone__string 
-						a.phone__string__link.ico_misc_sprites.ico-telephone(href="tel:+79211231213") +7 (921) 123-12-13
+					li.address__string.ico-misc.ico-map-pin
+						span.address__text ул. Маяковская 6, офис 17
+					li.phone__string.ico-misc.ico-telephone
+						a.phone__string__link(href="tel:+79211231213")
+							span.phone +7 (921) 123-12-13
 	header.header2-container.clearfix
 		.header2-content
 			a.logo__link(href="index.html")
