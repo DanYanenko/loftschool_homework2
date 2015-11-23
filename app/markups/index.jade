@@ -17,11 +17,11 @@ block content
 				span.view-options__text Вид каталога
 				ul.view__list
 					li.view__item.active(data-mode="detailed-list")
-						a.view__item__link.view__item__link_detailed-list Detailed list
+						a.view__item__link.view__item__link_detailed-list.ico-view-detailed-list Detailed list
 					li.view__item(data-mode="thumbnails")
-						a.view__item__link.view__item__link_thumbnails Thumbnails
+						a.view__item__link.view__item__link_thumbnails.ico-view-thumbnails Thumbnails
 					li.view__item(data-mode="simple-list")
-						a.view__item__link.view__item__link_simple-list List
+						a.view__item__link.view__item__link_simple-list.ico-view-simple-list List
 							-
 								var products = {
 									model1:{
@@ -336,7 +336,7 @@ block content
 					li.pagination__item.pagination__item_prev
 						a(href="#").pagination__link= '<'
 					- for (var i = 1; i<4; i++)
-						li.pali.pagination__item
+						li.pagination__item
 							a(href="#").pagination__link= i
 
 					li.pagination__item.pagination__item_next

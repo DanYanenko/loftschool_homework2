@@ -1,17 +1,17 @@
- .ico {
-    background-image: url(spritesheet.png);
-    background-repeat: no-repeat;
-    display: block;
-}
+
 
 .ico-arrow {
+	background-image: url("../img/accordion_arrows/accordion_arrows.png");
     width: 18px;
     height: 11px;
     background-position: -70px -70px;
+    background-repeat: no-repeat;
 }
 
 .ico-arrow_down {
     width: 18px;
     height: 11px;
     background-position: -228px -70px;
+    background-repeat: no-repeat;
+    background-image: url("../img/accordion_arrows/accordion_arrows.png");
 }
