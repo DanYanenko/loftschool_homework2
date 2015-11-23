@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .sidebar {
   float: left; }
 
@@ -79,7 +80,10 @@
     padding-bottom: 21px;
     display: block;
     vertical-align: top;
-    cursor: pointer; }
+    cursor: pointer;
+    /* .arrow_down{  // Разворот стрелки при раскрытии аккордеона
+				background:url('../img/arrow_down.png') no-repeat 0 4px;
+			} */ }
     .selection_settings .accordion__item_header .header-text {
       font-family: 'open_sanssemibold';
       font-size: 16px;
@@ -94,11 +98,8 @@
       text-indent: -9999px;
       position: relative;
       display: inline-block;
-      width: 18px;
-      height: 17px;
-      background: url("../img/arrow.png") no-repeat 0 7px; }
-    .selection_settings .accordion__item_header .arrow_down {
-      background: url("../img/arrow_down.png") no-repeat 0 4px; }
+      /* width:18px;
+			height:17px; */ }
   .selection_settings .accordion__item {
     display: block;
     font-size: 0;
@@ -489,13 +490,19 @@
   vertical-align: middle;
   width: 19px;
   height: 19px;
-  background-image: url("../img/checkbox-unactive.png"); }
+  background-image: url("../img/checkbox/checkbox.png");
+  background-repeat: no-repeat;
+  background-position: -70px -229px; }
 
 .checkbox__item:active + .fake-checkbox {
-  background-image: url("../img/checkbox-active-hover.png"); }
+  background-image: url("../img/checkbox/checkbox.png");
+  background-repeat: no-repeat;
+  background-position: -229px -70px; }
 
 .checkbox__item:checked + .fake-checkbox {
-  background-image: url("../img/checkbox-active.png"); }
+  background-image: url("../img/checkbox/checkbox.png");
+  background-repeat: no-repeat;
+  background-position: -70px -70px; }
 
 .fake-radiobutton {
   word-wrap: break-word;
@@ -504,13 +511,19 @@
   vertical-align: middle;
   width: 19px;
   height: 19px;
-  background-image: url("../img/radiobutton-unchecked.png"); }
+  background-image: url("../img/radiobutton/radiobutton.png");
+  background-position: -70px -229px;
+  background-repeat: no-repeat; }
 
 .radiobutton__item:checked + .fake-radiobutton {
-  background-image: url("../img/radiobutton-checked.png"); }
+  background-image: url("../img/radiobutton/radiobutton.png");
+  background-position: -229px -70px;
+  background-repeat: no-repeat; }
 
 .radiobutton__item:active + .fake-radiobutton {
-  background-image: url("../img/radiobutton-active.png"); }
+  background-image: url("../img/radiobutton/radiobutton.png");
+  background-position: -70px -70px;
+  background-repeat: no-repeat; }
 
 .price__slider {
   font-size: 12px;

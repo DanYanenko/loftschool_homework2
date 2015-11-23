@@ -1,117 +1,76 @@
-.ico {
-  background-image: url(spritesheet.png);
-  background-repeat: no-repeat;
-  display: block; }
-
 .ico-arrow {
+  background-image: url("../img/accordion_arrows/accordion_arrows.png");
   width: 18px;
   height: 11px;
-  background-position: -70px -70px; }
+  background-position: -70px -70px;
+  background-repeat: no-repeat; }
 
 .ico-arrow_down {
   width: 18px;
   height: 11px;
-  background-position: -228px -70px; }
-
-.ico {
-  background-image: url(spritesheet.png);
+  background-position: -228px -70px;
   background-repeat: no-repeat;
-  display: block; }
+  background-image: url("../img/accordion_arrows/accordion_arrows.png"); }
 
-.ico-checkbox-active {
-  width: 19px;
-  height: 19px;
-  background-position: -70px -70px; }
-
-.ico-checkbox-active-hover {
-  width: 19px;
-  height: 19px;
-  background-position: -229px -70px; }
-
-.ico-checkbox-unactive {
-  width: 19px;
-  height: 19px;
-  background-position: -70px -229px; }
-
-.ico {
-  background-image: url(spritesheet.png);
-  background-repeat: no-repeat;
-  display: block; }
-
-.ico-footer-FB {
+.ico-footer__social-FB {
   width: 43px;
   height: 43px;
   background-position: -70px -70px; }
 
-.ico-footer-FB-hover {
+.ico-footer__social-FB:hover {
   width: 43px;
   height: 43px;
   background-position: -253px -70px; }
 
-.ico-footer-TW {
+.ico-footer__social-TW {
   width: 43px;
   height: 43px;
   background-position: -70px -253px; }
 
-.ico-footer-TW-hover {
+.ico-footer__social-TW:hover {
   width: 43px;
   height: 43px;
   background-position: -253px -253px; }
 
-.ico-footer-VK {
+.ico-footer__social-VK {
   width: 43px;
   height: 43px;
   background-position: -436px -70px; }
 
-.ico-footer-VK-hover {
+.ico-footer__social-VK:hover {
   width: 43px;
   height: 43px;
   background-position: -436px -253px; }
 
-.ico {
-  background-image: url(spritesheet.png);
-  background-repeat: no-repeat;
-  display: block; }
-
-.ico-header-FB {
+.ico-header__social-FB {
   width: 26px;
   height: 26px;
   background-position: -70px -70px; }
 
-.ico-header-FB-hover {
+.ico-header__social-FB:hover {
   width: 26px;
   height: 26px;
   background-position: -236px -70px; }
 
-.ico-header-TW {
+.ico-header__social-TW {
   width: 26px;
   height: 26px;
   background-position: -70px -236px; }
 
-.ico-header-TW-hover {
+.ico-header__social-TW:hover {
   width: 26px;
   height: 26px;
   background-position: -236px -236px; }
 
-.ico-header-VK {
+.ico-header__social-VK {
   width: 27px;
   height: 26px;
   background-position: -402px -70px; }
 
-.ico-header-VK-hover {
+.ico-header__social-VK:hover {
   width: 27px;
   height: 26px;
   background-position: -402px -236px; }
-
-.ico {
-  background-image: url(spritesheet.png);
-  background-repeat: no-repeat;
-  display: block; }
-
-.ico-in-stock {
-  width: 7px;
-  height: 7px;
-  background-position: -70px -70px; }
 
 .ico-map-pin {
   width: 12px;
@@ -128,127 +87,75 @@
   height: 16px;
   background-position: -369px -224px; }
 
-.ico {
-  background-image: url(spritesheet.png);
+.ico-view-detailed-list:hover, .view__list .view__item.active .view__item__link_detailed-list {
+  background-image: url("../img/view_icons/view_icons.png");
   background-repeat: no-repeat;
-  display: block; }
+  width: 16px;
+  height: 16px;
+  background-position: -70px -70px;
+  background-repeat: no-repeat; }
 
-.ico-radiobutton-active {
-  width: 19px;
-  height: 19px;
-  background-position: -70px -70px; }
-
-.ico-radiobutton-checked {
-  width: 19px;
-  height: 19px;
-  background-position: -229px -70px; }
-
-.ico-radiobutton-unchecked {
-  width: 19px;
-  height: 19px;
-  background-position: -70px -229px; }
-
-.ico {
-  background-image: url(spritesheet.png);
+.ico-view-detailed-list {
+  background-image: url("../img/view_icons/view_icons.png");
   background-repeat: no-repeat;
-  display: block; }
-
-.ico-star {
   width: 16px;
-  height: 15px;
-  background-position: -70px -70px; }
+  height: 16px;
+  background-position: -226px -70px;
+  background-repeat: no-repeat; }
 
-.ico-star-empty {
-  width: 16px;
-  height: 15px;
-  background-position: -226px -70px; }
-
-.ico {
-  background-image: url(spritesheet.png);
+.ico-view-simple-list:hover, .view__list .view__item.active .view__item__link_simple-list {
+  background-image: url("../img/view_icons/view_icons.png");
   background-repeat: no-repeat;
-  display: block; }
-
-.ico-select_arrow {
-  width: 13px;
-  height: 9px;
-  background-position: -70px -70px; }
-
-.ico-select_arrow_up {
-  width: 13px;
-  height: 9px;
-  background-position: -223px -70px; }
-
-.ico-view-detailed-list-active {
   width: 16px;
   height: 16px;
-  background-position: -70px -70px; }
+  background-position: -70px -226px;
+  background-repeat: no-repeat; }
 
-.ico-view-detailed-list-unactive {
+.ico-view-simple-list {
+  background-image: url("../img/view_icons/view_icons.png");
+  background-repeat: no-repeat;
   width: 16px;
   height: 16px;
-  background-position: -226px -70px; }
+  background-position: -226px -226px;
+  background-repeat: no-repeat; }
 
-.ico-view-simple-list-active {
+.ico-view-thumbnails:hover, .view__list .view__item.active .view__item__link_thumbnails {
+  background-image: url("../img/view_icons/view_icons.png");
+  background-repeat: no-repeat;
   width: 16px;
   height: 16px;
-  background-position: -70px -226px; }
+  background-position: -382px -70px;
+  background-repeat: no-repeat; }
 
-.ico-view-simple-list-unactive {
+.ico-view-thumbnails {
+  background-image: url("../img/view_icons/view_icons.png");
+  background-repeat: no-repeat;
   width: 16px;
   height: 16px;
-  background-position: -226px -226px; }
-
-.ico-view-thumbnails-active {
-  width: 16px;
-  height: 16px;
-  background-position: -382px -70px; }
-
-.ico-view-thumbnails-unactive {
-  width: 16px;
-  height: 16px;
-  background-position: -382px -226px; }
+  background-position: -382px -226px;
+  background-repeat: no-repeat; }
 
 .ico-accordion_arrows_sprites {
-  background-image: url(../img/accordion_arrows_sprites/*.png);
+  background-image: url(../img/accordion_arrows_sprites/accordion_arrows_sprites.png);
   background-repeat: no-repeat;
   display: block; }
 
-.ico-checkbox_sprites {
-  background-image: url(../img/checkbox_sprites/*.png);
+.ico-footer__social_icons {
+  background-image: url(../img/footer__social_icons/footer__social_icons.png);
   background-repeat: no-repeat;
   display: block; }
 
-.ico-footer_social_icons_sprites {
-  background-image: url(../img/footer_social_icons_sprites/*.png);
-  background-repeat: no-repeat;
-  display: block; }
-
-.ico-header_social_icons_sprites {
-  background-image: url(../img/header_social_icons_sprites/*.png);
+.ico-header__social_icons {
+  background-image: url(../img/header__social_icons/header__social_icons.png);
   background-repeat: no-repeat;
   display: block; }
 
 .ico-misc_sprites {
-  background-image: url(../img/misc_sprites/*.png);
-  background-repeat: no-repeat;
-  display: block; }
-
-.ico-radiobutton_sprites {
-  background-image: url(../img/radiobutton_sprites/*.png);
-  background-repeat: no-repeat;
-  display: block; }
-
-.ico-rating_stars_sprites {
-  background-image: url(../img/rating_stars_sprites/*.png);
-  background-repeat: no-repeat;
-  display: block; }
-
-.ico-select_arrows_sprites {
-  background-image: url(../img/select_arrows_sprites/*.png);
+  background-image: url(../img/misc_sprites/misc_sprites.png);
   background-repeat: no-repeat;
   display: block; }
 
 .ico-view_icons_sprites {
-  background-image: url(../img/view_icons_sprites/*.png);
+  background-image: url(../img/view_icons_sprites/view_icons_sprites.png);
   background-repeat: no-repeat;
   display: block; }

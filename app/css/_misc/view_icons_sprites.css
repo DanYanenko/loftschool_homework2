@@ -1,29 +1,47 @@
-.ico-view-detailed-list-active {
+.ico-view-detailed-list:hover, .view__list .view__item.active .view__item__link_detailed-list {
+  background-image: url("../img/view_icons/view_icons.png");
+  background-repeat: no-repeat;
   width: 16px;
   height: 16px;
-  background-position: -70px -70px; }
+  background-position: -70px -70px;
+  background-repeat: no-repeat; }
 
-.ico-view-detailed-list-unactive {
+.ico-view-detailed-list {
+  background-image: url("../img/view_icons/view_icons.png");
+  background-repeat: no-repeat;
   width: 16px;
   height: 16px;
-  background-position: -226px -70px; }
+  background-position: -226px -70px;
+  background-repeat: no-repeat; }
 
-.ico-view-simple-list-active {
+.ico-view-simple-list:hover, .view__list .view__item.active .view__item__link_simple-list {
+  background-image: url("../img/view_icons/view_icons.png");
+  background-repeat: no-repeat;
   width: 16px;
   height: 16px;
-  background-position: -70px -226px; }
+  background-position: -70px -226px;
+  background-repeat: no-repeat; }
 
-.ico-view-simple-list-unactive {
+.ico-view-simple-list {
+  background-image: url("../img/view_icons/view_icons.png");
+  background-repeat: no-repeat;
   width: 16px;
   height: 16px;
-  background-position: -226px -226px; }
+  background-position: -226px -226px;
+  background-repeat: no-repeat; }
 
-.ico-view-thumbnails-active {
+.ico-view-thumbnails:hover, .view__list .view__item.active .view__item__link_thumbnails {
+  background-image: url("../img/view_icons/view_icons.png");
+  background-repeat: no-repeat;
   width: 16px;
   height: 16px;
-  background-position: -382px -70px; }
+  background-position: -382px -70px;
+  background-repeat: no-repeat; }
 
-.ico-view-thumbnails-unactive {
+.ico-view-thumbnails {
+  background-image: url("../img/view_icons/view_icons.png");
+  background-repeat: no-repeat;
   width: 16px;
   height: 16px;
-  background-position: -382px -226px; }
+  background-position: -382px -226px;
+  background-repeat: no-repeat; }

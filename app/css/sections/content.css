@@ -58,7 +58,9 @@
     left: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
-    background-image: url("../img/select_arrow.png") !important; }
+    background-image: url("../img/select_arrows/select_arrows.png") !important;
+    background-position: -70px -70px !important;
+    background-repeat: no-repeat !important; }
   .select2-container .select2-selection__rendered {
     padding-right: 0px;
     font-size: 14px !important;
@@ -100,7 +102,11 @@
   left: 3px !important; }
 
 .select2-container--open .select2-selection__arrow b {
-  background-image: url("../img/select_arrow_up.png") !important; }
+  background-image: url("../img/select_arrows/select_arrows.png") !important;
+  width: 13px !important;
+  height: 9px !important;
+  background-position: -223px -70px !important;
+  background-repeat: no-repeat !important; }
 
 .view-options {
   margin-left: 196px; }
@@ -119,39 +125,24 @@
     .view-options .view__list .view__item__link_detailed-list {
       display: block;
       position: relative;
-      background: url("../img/view-detailed-list-unactive.png") no-repeat center;
       text-indent: -9999px;
       height: 50px;
       width: 50px;
       cursor: pointer; }
-      .view-options .view__list .view__item__link_detailed-list:hover {
-        background-image: url("../img/view-detailed-list-active.png"); }
     .view-options .view__list .view__item__link_thumbnails {
       display: block;
       position: relative;
-      background: url("../img/view-thumbnails-unactive.png") no-repeat center;
       text-indent: -9999px;
       height: 50px;
       width: 50px;
       cursor: pointer; }
-      .view-options .view__list .view__item__link_thumbnails:hover {
-        background-image: url("../img/view-thumbnails-active.png"); }
     .view-options .view__list .view__item__link_simple-list {
       display: block;
       position: relative;
-      background: url("../img/view-simple-list-unactive.png") no-repeat center;
       text-indent: -9999px;
       height: 50px;
       width: 50px;
       cursor: pointer; }
-      .view-options .view__list .view__item__link_simple-list:hover {
-        background-image: url("../img/view-simple-list-active.png"); }
-    .view-options .view__list .view__item.active .view__item__link_detailed-list {
-      background-image: url("../img/view-detailed-list-active.png") !important; }
-    .view-options .view__list .view__item.active .view__item__link_thumbnails {
-      background-image: url("../img/view-thumbnails-active.png") !important; }
-    .view-options .view__list .view__item.active .view__item__link_simple-list {
-      background-image: url("../img/view-simple-list-active.png") !important; }
   .view-options__text {
     font-family: 'open_sansregular';
     font-size: 14px;
@@ -210,12 +201,16 @@
         display: inline-block;
         vertical-align: middle; }
         .detailed-list .model-main-info .rating .rating__list .rating__item {
-          background: url("../img/star-empty.png") no-repeat;
           display: inline-block;
           width: 16px;
-          height: 15px; }
+          height: 15px;
+          background-image: url("../img/rating_stars/rating_stars.png");
+          background-position: -226px -70px;
+          background-repeat: no-repeat; }
           .detailed-list .model-main-info .rating .rating__list .rating__item.rating__item_filled {
-            background: url("../img/star.png") no-repeat; }
+            background-image: url("../img/rating_stars/rating_stars.png");
+            background-position: -70px -70px;
+            background-repeat: no-repeat; }
       .detailed-list .model-main-info .rating .rating-amount {
         color: #fbfbfb;
         font-size: 12px;
@@ -590,12 +585,16 @@
           display: inline-block;
           vertical-align: middle; }
           .thumbnails__list .thumbnails__item__wrapper .rating .rating__list .rating__item {
-            background: url("../img/star-empty.png") no-repeat;
             display: inline-block;
             width: 16px;
-            height: 15px; }
+            height: 15px;
+            background-image: url("../img/rating_stars/rating_stars.png");
+            background-position: -226px -70px;
+            background-repeat: no-repeat; }
             .thumbnails__list .thumbnails__item__wrapper .rating .rating__list .rating__item.rating__item_filled {
-              background: url("../img/star.png") no-repeat; }
+              background-image: url("../img/rating_stars/rating_stars.png");
+              background-position: -70px -70px;
+              background-repeat: no-repeat; }
         .thumbnails__list .thumbnails__item__wrapper .rating .rating-amount {
           color: #fbfbfb;
           font-size: 12px;

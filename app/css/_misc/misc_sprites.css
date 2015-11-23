@@ -1,13 +1,3 @@
-.ico {
-  background-image: url(spritesheet.png);
-  background-repeat: no-repeat;
-  display: block; }
-
-.ico-in-stock {
-  width: 7px;
-  height: 7px;
-  background-position: -70px -70px; }
-
 .ico-map-pin {
   width: 12px;
   height: 16px;
