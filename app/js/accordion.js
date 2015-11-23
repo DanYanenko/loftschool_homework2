@@ -18,14 +18,14 @@ $(document).ready(function() {
 
 				item.addClass('active');
 				otherContent.stop(true,true).slideUp(duration);
-				arrows.removeClass('arrow_down');
-				arrow.addClass('arrow_down');
+				arrows.removeClass('ico-arrow_down');
+				arrow.addClass('ico-arrow_down');
 				content.stop(true,true).slideDown(duration);
 			}	else {
 				
 				content.stop(true,true).slideUp(duration);
 				item.removeClass('active');
-				arrow.removeClass('arrow_down');
+				arrow.removeClass('ico-arrow_down');
 			}
 
 	

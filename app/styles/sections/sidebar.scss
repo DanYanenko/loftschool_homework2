@@ -89,11 +89,11 @@
 				float: right;
 				margin-right: 10px;
 				@include arrow();
-				background:url('../img/arrow.png') no-repeat 0 7px;
+				//background:url('../img/arrow.png') no-repeat 0 7px;
 			}
-			.arrow_down{  // Разворот стрелки при раскрытии аккордеона
+			/* .arrow_down{  // Разворот стрелки при раскрытии аккордеона
 				background:url('../img/arrow_down.png') no-repeat 0 4px;
-			}	
+			} */	
 		}
 				
 		
@@ -148,23 +148,35 @@
 }
 
 @include fake(checkbox){
-	background-image:url('../img/checkbox-unactive.png');
+	background-image:url('../img/checkbox/checkbox.png');
+	background-repeat: no-repeat;
+    background-position: -70px -229px;
 }
 .checkbox__item:active + .fake-checkbox{
-			background-image: url('../img/checkbox-active-hover.png');
+		background-image:url('../img/checkbox/checkbox.png');
+		background-repeat: no-repeat;
+	   	background-position: -229px -70px;
 		}
 .checkbox__item:checked + .fake-checkbox{
-		background-image: url('../img/checkbox-active.png');
+		background-image:url('../img/checkbox/checkbox.png');
+		background-repeat: no-repeat;
+	   	background-position: -70px -70px;
 	}
 
 @include fake(radiobutton){
-	background-image:url('../img/radiobutton-unchecked.png');
+	background-image:url('../img/radiobutton/radiobutton.png');
+	background-position: -70px -229px;
+	background-repeat: no-repeat;
 }
 .radiobutton__item:checked + .fake-radiobutton{
-		background-image: url('../img/radiobutton-checked.png');
+	background-image:url('../img/radiobutton/radiobutton.png');
+	background-position: -229px -70px;
+	background-repeat: no-repeat;
 	}
 .radiobutton__item:active + .fake-radiobutton{
-		background-image: url('../img/radiobutton-active.png');
+		background-image:url('../img/radiobutton/radiobutton.png');
+		background-position: -70px -70px;
+		background-repeat: no-repeat;
 	}
 
 

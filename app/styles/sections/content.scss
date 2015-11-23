@@ -76,7 +76,11 @@
 		    left: 0 !important;
 		    right: 0 !important;
 		    bottom: 0 !important;
-		    background-image: url("../img/select_arrow.png") !important;
+		    
+		    background-image: url('../img/select_arrows/select_arrows.png')!important;//sprite for arrow
+			background-position: -70px -70px!important;
+		    background-repeat: no-repeat!important;
+	   
 		}				
 	}
 		
@@ -149,7 +153,12 @@
     	left: 3px!important;
 	}
 	.select2-selection__arrow b{
-		background-image: url('../img/select_arrow_up.png')!important;//sprite for arrow
+		background-image: url('../img/select_arrows/select_arrows.png')!important;//sprite for arrow
+		 width: 13px!important;
+	    height: 9px!important;
+	    background-position: -223px -70px!important;
+	    background-repeat: no-repeat!important;
+   	 	
 	}
 }
 // .select__item{

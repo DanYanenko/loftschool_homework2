@@ -21,11 +21,8 @@
 								position:relative;
 								display:block;
 
-								//background-image: url('../img/#{$mainTag}_social_icons/#{$mainTag}_social_icons.png');
-								text-indent: -9999px;
-								// height: 100%;
-								// width: 100%;
 								
+								text-indent: -9999px;
 							}
 						}	
 					}
@@ -142,8 +139,8 @@
 			text-indent:-9999px;
 			position:relative;
 			display:inline-block;
-			width:18px;
-			height:17px;
+			/* width:18px;
+			height:17px; */
 			@content;
 		}
 
@@ -159,24 +156,14 @@
 			&__link_#{$view}{
 				display:block;
 				position: relative;
-				background: url("../img/view-#{$view}-unactive.png") no-repeat center;
 				text-indent: -9999px;
 				height: 50px;
 				width: 50px;
 				cursor:pointer;
-				&:hover{
-					background-image: url('../img/view-#{$view}-active.png');
-				}
+				
 			}			
 		}
 	}	
-	.view__item.active{
-		@each $view in $type{
-			.view__item__link_#{$view}{
-				background-image: url('../img/view-#{$view}-active.png')!important;
-			}
-		}			
-	}					
 }
 
 @mixin slideShow(){
@@ -331,12 +318,20 @@
 		vertical-align: middle;
 		
 		.rating__item{
-			background: url('../img/star-empty.png') no-repeat;
+			
 			display: inline-block;
 			width:16px;
 			height:15px;
+
+			background-image: url("../img/rating_stars/rating_stars.png");
+			background-position: -226px -70px;
+			background-repeat: no-repeat;
+
+			
 			&.rating__item_filled{
-				background: url('../img/star.png') no-repeat;
+			background-image: url("../img/rating_stars/rating_stars.png");
+			background-position: -70px -70px;
+			background-repeat: no-repeat;
 			}
 		}
 		
