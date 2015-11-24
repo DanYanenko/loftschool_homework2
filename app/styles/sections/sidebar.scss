@@ -199,8 +199,8 @@
 		.min-range__input,.max-range__input{
 			margin-left:8px;
 		}
-
-	}
+	}	
+	@include ui-slider-styles();
 }
 
 .accordion__inner__list{

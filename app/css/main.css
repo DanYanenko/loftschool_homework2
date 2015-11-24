@@ -1535,7 +1535,14 @@
 
 .price__slider {
   font-size: 12px;
-  margin-bottom: 33px; }
+  margin-bottom: 33px;
+  /* Ширина слайдера */
+  /* Контейнер слайдера */
+  /* Ползунок */
+  /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+  /* позиционируем ползунки */
+  /* оформление полосы по которой ходит ползунок */
+  /* оформление активного участка (между двумя ползунками) */ }
   .price__slider .min-range {
     font-family: 'open_sansregular';
     font-size: 14px;
@@ -1580,6 +1587,43 @@
       margin-left: 47px; }
     .price__slider .range-block .min-range__input, .price__slider .range-block .max-range__input {
       margin-left: 8px; }
+  .price__slider #slider {
+    width: 273px !important; }
+  .price__slider .ui-slider {
+    position: relative !important; }
+  .price__slider .ui-slider .ui-slider-handle {
+    position: absolute !important;
+    width: 8px !important;
+    height: 14px !important;
+    background: url("../img/misc/slider-handle.png") no-repeat !important;
+    /* картинка изображающая ползунок. Или можно залить цветом, задать бордюр и скругления */
+    cursor: pointer !important; }
+  .price__slider .ui-slider .ui-slider-range {
+    position: absolute !important;
+    z-index: 1 !important;
+    font-size: 0.7em !important;
+    display: block !important;
+    border: 0 !important;
+    overflow: hidden !important; }
+  .price__slider .ui-slider-horizontal {
+    height: 3px !important;
+    /* задаем высоту согласно дизайна */ }
+  .price__slider .ui-slider-horizontal .ui-slider-handle {
+    top: 2px !important;
+    margin-left: -4px !important;
+    z-index: 5 !important;
+    outline: none !important; }
+  .price__slider .ui-slider-horizontal .ui-slider-range {
+    top: 0 !important;
+    height: 100% !important; }
+  .price__slider .ui-slider-horizontal .ui-slider-range-min {
+    left: 0 !important; }
+  .price__slider .ui-slider-horizontal .ui-slider-range-max {
+    right: 0 !important; }
+  .price__slider .ui-widget-content {
+    background: #cccccc !important; }
+  .price__slider .ui-widget-header {
+    background: #ff6600 !important; }
 
 .accordion__inner__list {
   display: none;

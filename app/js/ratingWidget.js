@@ -8,9 +8,9 @@ var RatingWidget = (function(){
 				
 
 				if(i < ratingAmount){
-					starClassName = 'rating-stars__item rating-stars__item__filled';
+					starClassName = 'rating__item rating__item_filled';
 				} else {
-					starClassName = 'rating-stars__item__filled';
+					starClassName = 'rating__item';
 				}
 
 				var star = $('<li>',{
@@ -26,13 +26,13 @@ var RatingWidget = (function(){
 		var _generateMarkup = function(ratingAmount,elementToAppend){
 			var 
 				ul = $('<ul>', {
-					class : 'rating-stars__list',
+					class : 'rating__list',
 					html : _letTheStarShining(ratingAmount)
 				});
 
 			var 
 				ratingDisplay = $('<div>',{
-					class : '.rating-amount',
+					class : 'rating-amount',
 					text : ratingAmount 
 				});
 
@@ -46,16 +46,15 @@ var RatingWidget = (function(){
 						$this = $(this),
 						ratingAmount = parseInt($this.data('rating'));
 
-					_generateMarkup(ratingAmount);	
+					_generateMarkup(ratingAmount,$this);	
 					
 				});
 			}
 		}
-	});
+	})();
 
 $(document).ready(function() {
 	
-	console.log('Hi!');
 	RatingWidget.init();
 	
 });

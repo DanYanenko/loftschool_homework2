@@ -21,7 +21,7 @@ head
 
 	//CSS
 	
-	//build:css dist/css/combined.css
+	//build:css css/vendor.css
 
 	link(rel="stylesheet" href="bower_components/jquery-ui-slider/jquery-ui.structure.css")
 	link(rel="stylesheet" href="bower_components/select2/dist/css/select2.css")
@@ -29,9 +29,14 @@ head
 	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
 
 	//endbower
-	link(rel="stylesheet" href="css/main.css")
-	
 	//endbuild
-	//Modernizer
 
+	//build:css css/combined.css
+	link(rel="stylesheet" href="css/main.css")
+	//endbuild
+	
+	//Modernizer
+	
+	//build:js js/modernizr.js	
 	script(src="bower_components/modernizr/modernizr.js")
+	//endbuild	

@@ -13,7 +13,10 @@ var
     uglify = require('gulp-uglify'),
     jade = require('gulp-jade'),
     del = require('del'),
-    gutil = require('gulp-util');
+    gutil = require('gulp-util'),
+    filter = require('gulp-filter'),
+    imagemin = require('gulp-imagemin'),
+    size = require("gulp-size");;
  
 gulp.task('jade',function(){
 	gulp.src('app/markups/index.jade')
@@ -23,11 +26,7 @@ gulp.task('jade',function(){
 		.pipe(gulp.dest('app/'));	
 });
 
-gulp.task('watchJade', function(){
-	gulp.watch([
-		'app/markups/index.jade'
-		], ['jade']);
-});
+
 
 gulp.task('css', function () {
   return gulp.src('app/styles/**/*.scss')
@@ -36,11 +35,7 @@ gulp.task('css', function () {
     .pipe(gulp.dest('app/css/'));
 });
 
-gulp.task('watchCss', function(){
-	gulp.watch([
-		'app/styles/**/*.scss'
-		], ['css']);
-});
+
 
 gulp.task('minCss', function(){
 return gulp.src('app/css/main.css')
@@ -58,6 +53,15 @@ gulp.task('server', function(){
 		}
 	});
 });
+
+gulp.task('watch', function(){
+	gulp.watch([
+		'app/js/*.js',
+		'app/css/**/*.css',
+		'app/*.html'
+		]).on('change', browserSync.reload);
+});
+
 gulp.task('bower', function () {
   gulp.src('app/index.html')
     .pipe(wiredep({
@@ -69,37 +73,73 @@ gulp.task('bower', function () {
 
 });
 
-
-gulp.task('watch', function(){
-	gulp.watch([
-		'app/js/*.js',
-		'app/css/**/*.css',
-		'app/*.html'
-		]).on('change', browserSync.reload);
-});
+gulp.task('default', ['server','watch']);
 
 
+/*********************************
 
-gulp.task('html', function () {
+	Сборка DIST
 
-	del(['dist/**/**'], function(err, paths){
+*********************************/
+
+//Очистка директория DIST
+gulp.task("clean-dist", function () {
+    return del(['dist/**/**'], function(err, paths){
 		console.log('Deleted files/folders:\n', path.join('\n'));
 	});
-	
-    var assets = useref.assets();
+});
 
+// Перенос шрифтов
+gulp.task("fonts", function() {
+    gulp.src("./app/Fonts/**/*")
+        .pipe(filter(["*.eot","*.svg","*.ttf","*.woff","*.woff2"]))
+        .pipe(gulp.dest("./dist/Fonts/"))
+});
 
- 
-    return gulp.src('app/index.html')
+// Перенос картинок
+gulp.task("images", function () {
+    return gulp.src("./app/img/**/*")
+            .pipe(imagemin({
+                progressive: true,
+                interlaced: true
+            }))
+            .pipe(gulp.dest("./dist/img"));
+});
+
+// Перенос остальных файлов (favicon и т.д.)
+gulp.task("extras", function () {
+    return gulp.src(["./app/*.*", "!./app/*.html"])
+            .pipe(gulp.dest("./dist"));
+});
+
+// Подключение js и css
+gulp.task('useref', function () {
+	var assets = useref.assets();
+
+    return gulp.src('./app/*.html')
         .pipe(assets)
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))
         .pipe(assets.restore())
         .pipe(useref())
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('default', ['server','watch']);
+// Вывод размера папки APP
+gulp.task("size-app", function () {
+    return gulp.src("app/**/*").pipe(size({title: "APP size: "}));
+});
+
+//Сборка всего в DIST
+
+gulp.task('dist', ['useref', 'fonts']);
+
+//Запуск сборки после очистки папки DIST
+
+gulp.task('build', ['clean-dist'], function(){
+	gulp.start('dist');
+});
+
 
 
 

@@ -1,6 +1,10 @@
-$(document).ready(function() {
+var slideshow = (function(){
+	// приватные свойства и методы;
+	var _setUpListeners = function(){
+		$('.slideshow__item__link').on('click', _slideshowAction);
+	};
 
-	$('.slideshow__item__link').on('click', function(event) {
+	var _slideshowAction = function(event){
 		event.preventDefault();
 		
 		var
@@ -12,10 +16,6 @@ $(document).ready(function() {
 			path = item.find('img').attr('src'),
 			duration = 200;
 
-		
-
-
-
 		if(!item.hasClass('active')){
 			$.each(items, function(index, val) {
 			 	$(val).removeClass('active');
@@ -24,6 +24,19 @@ $(document).ready(function() {
 			display.find('img').fadeOut('duration', function() {
 				$(this).attr('src', path).fadeIn(duration);
 			});		
-		}				
-	});
+		}
+	}
+
+	return {
+		//публичные свойства и методы;
+		init: function(){
+				_setUpListeners();
+			}
+	};
+}());
+
+$(document).ready(function() {
+	if($('.slideshow-block').length){
+		slideshow.init();
+	}
 });						

@@ -46,14 +46,7 @@ mixin content-detailed-list(products)
 				.model-main-info
 					h2.model-name= products[ind].modelName
 					.desc-block= products[ind].description
-					div.rating(data-rating="")
-						ul.rating__list
-							li.rating__item.rating__item_filled
-							li.rating__item.rating__item_filled
-							li.rating__item.rating__item_filled
-							li.rating__item.rating__item_filled
-							li.rating__item
-						.rating-amount 4
+					div.rating(data-rating="4")
 				.to-basket
 					.price= products[ind].price
 						span.rouble-sign г
@@ -105,14 +98,7 @@ mixin content-thumbnails(products)
 							li.params__item.clearfix
 								div(class="param-name")= param
 								div(class="param-value")= products[ind].parameters[param]
-					div(class="rating" data-rating="5")
-						ul.rating__list
-							li.rating__item.rating__item_filled
-							li.rating__item.rating__item_filled
-							li.rating__item.rating__item_filled
-							li.rating__item.rating__item_filled
-							li.rating__item
-						.rating-amount 4
+					div(class="rating" data-rating="4")
 					.price= products[ind].price
 						span.rouble-sign г
 					.availability-state

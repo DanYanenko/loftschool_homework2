@@ -1,81 +1,92 @@
-$(document).ready(function(){
+var slider = (function(){
 
-    var minValue = $('#slider').data('minValue'),
-        maxValue = $('#slider').data('maxValue'),
-        rangeStep = 100;
+    var init = function(){
+        
+        var minValue = $('#slider').data('minValue'),
+            maxValue = $('#slider').data('maxValue'),
+            rangeStep = 100;
+
+        _sliderCreate(minValue, maxValue, rangeStep);
+        _setUpListeners();
+
+    };
+
+// Прослушка событий
+    var _setUpListeners = function(){
+
+        $('#max-range, #min-range').on('change', _sliderCheck);
+
+        $('#max-range, #min-range').on('keypress', _sliderLettersFilter);
+
+    };
+
+// Инициализация слайдера
+    var _sliderCreate = function(minValue, maxValue, rangeStep){
+        
         if (minValue > maxValue){
             minValue = maxValue;
         }
 
 
-    $('#min-range').val(minValue); 
-    $('#max-range').val(maxValue); 
+        $('#min-range').val(minValue); 
+        $('#max-range').val(maxValue); 
 
-    $('#slider').slider({
-        min: minValue,
-        max: maxValue,
-        values: [minValue,maxValue],
-        range:true,
-        step: rangeStep,
-        animate: 250,
-        stop: function(event,ui){
-            $('#min-range').val($('#slider').slider("values",0)); 
-            $('#max-range').val($('#slider').slider("values",1));                    
-        },
-        slide: function(event,ui){
-            $('#min-range').val($('#slider').slider("values",0)); 
-            $('#max-range').val($('#slider').slider("values",1));
-        }
+        $('#slider').slider({
+            min: minValue,
+            max: maxValue,
+            values: [minValue,maxValue],
+            range:true,
+            step: rangeStep,
+            animate: 250,
+            stop: function(event,ui){
+                $('#min-range').val($('#slider').slider("values",0)); 
+                $('#max-range').val($('#slider').slider("values",1));                    
+            },
+            slide: function(event,ui){
+                $('#min-range').val($('#slider').slider("values",0)); 
+                $('#max-range').val($('#slider').slider("values",1));
+            }
+        });
+    };
 
-    });
+// Проверка на перекрещивание ползунков слайдера, проверка ввода значений в input
+    var _sliderCheck = function(){
 
-    // $('#min-range').on('change', function() {
-    //     var value1 = $('#min-range').val(),
-    //         value2 = $('#max-range').val();
-    //         console.log(value1);
-    //     if( parseInt(value1) > parseInt(value2) ){
-
-    //         value1 = value2;
-    //         $('#min-range').val(value1);
-    //     }
-
-    //     $('#slider').slider("values", 0, value1);
-
-    // });
-
-    $('#max-range, #min-range').on('change', function() {
-        var value1 = $('#min-range').val(),
-            value2 = $('#max-range').val();
-    
-        console.log(value1,value2);
+        var value1 = parseInt($('#min-range').val()),
+            value2 = parseInt($('#max-range').val()),
+            maxValue = parseInt($('#slider').data('maxValue'));
+        
 
         if( value1 > maxValue ) {
             value1 = value2;
             $('#min-range').val(value1);
+            console.log('Ciao! 1');
         }
 
-        if( (parseInt(value2) < parseInt(value1)) ){
+        if( value2 < value1 ){
             value2 = value1;
             $('#max-range').val(value2);
+            console.log('Ciao! 2');
         }
 
-        if( parseInt(value1) > parseInt(value2) ){
+        if( value1 >  value2 ) {
             value1 = value2;
             $('#min-range').val(value1);
+            console.log('Ciao! 3');
         }
 
         if( value2 > maxValue ) {
             value2 = maxValue;
             $('#max-range').val(value2);
+            console.log('Ciao! 4');
         }
 
         $('#slider').slider("values", [value1,value2]);
+    };
 
-    });
+// Фильтрация ввода буквенных значений в input
+    var _sliderLettersFilter = function(event){
 
-
-     //Фильтрация ввода буквенных значений в поля
-    $('#max-range, #min-range').on('keypress', function(event) {
         var key, keyChar;
 
         if(!event) {
@@ -105,6 +116,18 @@ $(document).ready(function(){
             return false;
         }
 
-    });  
+    };    
+
+    return {
+        init : init      
+    };
+
+})();
+
+$(document).ready(function(){
+
+    if($('#slider').length){
+        slider.init();
+    } 
 
 });

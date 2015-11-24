@@ -333,8 +333,7 @@
 			background-position: -70px -70px;
 			background-repeat: no-repeat;
 			}
-		}
-		
+		}		
 	}
 
 	.rating-amount{
@@ -367,5 +366,98 @@
 	height: $sprite-height;
 	width: $sprite-width;
 }
+
+@mixin ui-slider-styles(){
+	/* Ширина слайдера */
+	#slider {
+	    width: 273px!important;
+	}
+	/* Контейнер слайдера */
+	.ui-slider {
+	    position: relative!important;
+	}
+	/* Ползунок */
+	.ui-slider .ui-slider-handle {
+
+	    position: absolute!important;
+
+   
+	    width: 8px!important;
+	    height: 14px!important;
+
+	    background: url('../img/misc/slider-handle.png') no-repeat!important; /* картинка изображающая ползунок. Или можно залить цветом, задать бордюр и скругления */
+
+	    cursor: pointer!important;
+
+	}
+
+	.ui-slider .ui-slider-range {
+
+	    position: absolute!important;
+
+	    z-index: 1!important;
+
+	    font-size: .7em!important;
+	    display: block!important;
+
+	    border: 0!important;
+
+	    overflow: hidden!important;
+
+	}
+
+	/* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+
+	.ui-slider-horizontal {
+
+	     height: 3px!important; /* задаем высоту согласно дизайна */
+
+	}
+
+	/* позиционируем ползунки */
+
+	.ui-slider-horizontal .ui-slider-handle { 
+	    top: 2px!important;
+	    margin-left: -4px!important;
+	    z-index: 5!important;
+	    outline: none!important;
+	}
+
+	.ui-slider-horizontal .ui-slider-range {
+
+	    top: 0!important;
+
+	    height: 100%!important;
+
+	}
+
+	.ui-slider-horizontal .ui-slider-range-min { 
+
+	    left: 0!important;
+
+	}
+
+	.ui-slider-horizontal .ui-slider-range-max {
+
+	    right: 0!important;
+	}
+
+	/* оформление полосы по которой ходит ползунок */
+
+	.ui-widget-content { 
+	    background: #cccccc!important;
+
+	}
+
+	/* оформление активного участка (между двумя ползунками) */
+
+	.ui-widget-header { 
+
+	    background: #ff6600!important;
+
+	}
+}
+	
+
 
 
