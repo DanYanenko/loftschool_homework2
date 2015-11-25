@@ -16,7 +16,7 @@ var
     gutil = require('gulp-util'),
     filter = require('gulp-filter'),
     imagemin = require('gulp-imagemin'),
-    size = require("gulp-size");;
+    size = require("gulp-size");
  
 gulp.task('jade',function(){
 	gulp.src('app/markups/index.jade')
@@ -91,9 +91,9 @@ gulp.task("clean-dist", function () {
 
 // Перенос шрифтов
 gulp.task("fonts", function() {
-    gulp.src("./app/Fonts/**/*")
-        .pipe(filter(["*.eot","*.svg","*.ttf","*.woff","*.woff2"]))
-        .pipe(gulp.dest("./dist/Fonts/"))
+    gulp.src("./app/Fonts/*.*")
+        // .pipe(filter(["*.css,*.eot","*.svg","*.ttf","*.woff","*.woff2"]))
+        .pipe(gulp.dest("./dist/Fonts/"));
 });
 
 // Перенос картинок

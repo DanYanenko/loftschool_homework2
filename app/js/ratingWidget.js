@@ -50,11 +50,13 @@ var RatingWidget = (function(){
 					
 				});
 			}
-		}
+		};
 	})();
 
 $(document).ready(function() {
 	
-	RatingWidget.init();
+	if($('.rating').length){
+		RatingWidget.init();
+	} 
 	
 });

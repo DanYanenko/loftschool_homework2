@@ -60,25 +60,25 @@ var slider = (function(){
         if( value1 > maxValue ) {
             value1 = value2;
             $('#min-range').val(value1);
-            console.log('Ciao! 1');
+            
         }
 
         if( value2 < value1 ){
             value2 = value1;
             $('#max-range').val(value2);
-            console.log('Ciao! 2');
+            
         }
 
         if( value1 >  value2 ) {
             value1 = value2;
             $('#min-range').val(value1);
-            console.log('Ciao! 3');
+            
         }
 
         if( value2 > maxValue ) {
             value2 = maxValue;
             $('#max-range').val(value2);
-            console.log('Ciao! 4');
+            
         }
 
         $('#slider').slider("values", [value1,value2]);
